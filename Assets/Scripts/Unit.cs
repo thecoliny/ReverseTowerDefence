@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private Transform target;
     NavMeshAgent agent;
-    public int health;
+    public float health;
 
 
     // Start is called before the first frame update
@@ -27,16 +27,21 @@ public class Unit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
-        if(other.tag == "End")
+        if (other.tag == "End")
         {
             Destroy(this.gameObject);
         }
+        else if (other.tag == "Projectile")
+        {
+            ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
+            ReactToHit(stats.damage);
+            Destroy(other.gameObject);
+        }
     }
-    public void ReactToHit(int damage)
+    public void ReactToHit(float damage)
     {
         health -= damage;
-        if(health <= 0)
+        if(health <= 0.0f)
         {
             Destroy(this.gameObject);
         }

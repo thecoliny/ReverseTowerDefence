@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
+    [SerializeField] private GameObject units;
     public GameObject[] towers;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +24,7 @@ public class UnitManager : MonoBehaviour
                     Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
                     GameObject _tower = Instantiate(towers[0]) as GameObject;
                     _tower.transform.position = position;
+                    _tower.transform.SetParent(units.transform);
                 }
 
             }
@@ -47,6 +44,7 @@ public class UnitManager : MonoBehaviour
                     Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
                     GameObject _tower = Instantiate(towers[1]) as GameObject;
                     _tower.transform.position = position;
+                    _tower.transform.SetParent(units.transform);
                 }
 
             }

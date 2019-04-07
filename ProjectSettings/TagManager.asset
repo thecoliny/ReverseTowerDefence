@@ -8,6 +8,7 @@ TagManager:
   - specular
   - Ground
   - Path
+  - Projectile
   layers:
   - Default
   - TransparentFX

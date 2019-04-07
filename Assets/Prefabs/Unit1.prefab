@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
-  health: 0
+  health: 2
