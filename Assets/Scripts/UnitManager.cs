@@ -5,6 +5,8 @@ using UnityEngine;
 public class UnitManager : MonoBehaviour
 {
     public GameObject[] towers;
+    public ButtonController buttonController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,9 @@ public class UnitManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        int selectedButton = buttonController.selectedButton;
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -26,13 +31,13 @@ public class UnitManager : MonoBehaviour
                 {
                     
                     Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
-                    GameObject _tower = Instantiate(towers[0]) as GameObject;
+                    GameObject _tower = Instantiate(towers[selectedButton - 1]) as GameObject;
                     _tower.transform.position = position;
                 }
 
             }
 
-        }
+        }/*
         if (Input.GetMouseButtonDown(1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -51,6 +56,6 @@ public class UnitManager : MonoBehaviour
 
             }
 
-        }
+        }*/
     }
 }
