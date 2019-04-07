@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5959bcc85934b00a6450616762d984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  units: {fileID: 0}
+  units: {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
   projectilePrefab: {fileID: 3214178667369628104, guid: fceb8eff3456d41f2bdf3e9c73014f2a,
     type: 3}
   range: 100

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
 
 
     [SerializeField] private Transform target;
+    private SceneController _sceneController;
     NavMeshAgent agent;
     public int health;
 
@@ -16,6 +18,11 @@ public class Unit : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        _sceneController = GameObject.FindGameObjectWithTag("Controller").GetComponent<SceneController>();
+        if (_sceneController == null)
+        {
+            Debug.Log("Error");
+        }
     }
 
     // Update is called once per frame
@@ -31,6 +38,7 @@ public class Unit : MonoBehaviour
         if(other.tag == "End")
         {
             Destroy(this.gameObject);
+            _sceneController.UpdateScore();
         }
     }
     public void ReactToHit(int damage)

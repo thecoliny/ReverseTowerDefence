@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Path
   - End
+  - Controller
   layers:
   - Default
   - TransparentFX

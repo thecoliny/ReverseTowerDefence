@@ -1,16 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UnitManager : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
     public GameObject[] towers;
+    public Text _textLabel;
+    private int score = 0;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    public void UpdateScore()
+    {
+        Debug.Log("Enter");
+        score++;
+        _textLabel.text = "score: " + score;
+
+    }
     // Update is called once per frame
     void Update()
     {
