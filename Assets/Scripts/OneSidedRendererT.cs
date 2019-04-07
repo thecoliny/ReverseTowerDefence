@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class OneSidedRenderer : MonoBehaviour
+public class OneSidedRendererT : MonoBehaviour
 {
     void Start()
     {
@@ -15,10 +15,10 @@ public class OneSidedRenderer : MonoBehaviour
         UVs[2] = new Vector2(0.0f, 0.0f);
         UVs[3] = new Vector2(0.0f, 0.0f);
         // Top
-        UVs[4] = new Vector2(0.0f, 0.0f);
-        UVs[5] = new Vector2(0.0f, 1.0f);
-        UVs[8] = new Vector2(1.0f, 0.0f);
-        UVs[9] = new Vector2(1.0f, 1.0f);
+        UVs[4] = new Vector2(1.0f, 1.0f);
+        UVs[5] = new Vector2(1.0f, 0.0f);
+        UVs[8] = new Vector2(0.0f, 1.0f);
+        UVs[9] = new Vector2(0.0f, 0.0f);
         // Back
         UVs[6] = new Vector2(0.0f, 0.0f);
         UVs[7] = new Vector2(0.0f, 0.0f);
