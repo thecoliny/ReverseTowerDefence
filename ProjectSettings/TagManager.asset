@@ -8,6 +8,7 @@ TagManager:
   - specular
   - Ground
   - Path
+  - End
   layers:
   - Default
   - TransparentFX
