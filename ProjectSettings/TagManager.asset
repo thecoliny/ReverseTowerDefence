@@ -11,6 +11,7 @@ TagManager:
   - Projectile
   - unit
   - end
+  - Currency
   layers:
   - Default
   - TransparentFX

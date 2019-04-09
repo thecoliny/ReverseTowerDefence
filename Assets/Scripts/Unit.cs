@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private Transform target;
     NavMeshAgent agent;
+    CurrencyManagement currencyManagement;
     public float health;
 
 
@@ -16,6 +17,7 @@ public class Unit : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        currencyManagement = GameObject.Find("CurrencyManager").GetComponent<CurrencyManagement>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,11 @@ public class Unit : MonoBehaviour
         {
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
             ReactToHit(stats.damage);
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "Currency")
+        {
+            currencyManagement.addCurrency(other.gameObject.GetComponent<CurrencyPickup>().pickupAmount);
             Destroy(other.gameObject);
         }
     }
