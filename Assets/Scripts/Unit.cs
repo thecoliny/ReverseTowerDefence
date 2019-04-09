@@ -27,9 +27,10 @@ public class Unit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "End")
+        if (other.tag == "end")
         {
             Destroy(this.gameObject);
+            Messenger.Broadcast(GameEvent.ENEMY_Passed);
         }
         else if (other.tag == "Projectile")
         {

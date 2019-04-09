@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8809620072136220578}
   m_Layer: 0
   m_Name: Colin
-  m_TagString: Untagged
+  m_TagString: unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
-  health: 2
+  health: 4
 --- !u!114 &8809620072136220578
 MonoBehaviour:
   m_ObjectHideFlags: 0

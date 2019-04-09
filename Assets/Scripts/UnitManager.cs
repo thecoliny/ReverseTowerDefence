@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    [SerializeField] private GameObject units;
-    public GameObject[] towers;
-    public ButtonController buttonController;
+    public GameObject[] units;
+    public UIController UIController;
 
     // Update is called once per frame
     void Update()
     {
 
-        int selectedButton = buttonController.selectedButton;
+        int selectedButton = UIController.selectedButton;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -26,9 +25,8 @@ public class UnitManager : MonoBehaviour
                 {
 
                     Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
-                    GameObject _tower = Instantiate(towers[selectedButton - 1]) as GameObject;
-                    _tower.transform.position = position;
-                    _tower.transform.SetParent(units.transform);
+                    GameObject _unit = Instantiate(units[selectedButton - 1]) as GameObject;
+                    _unit.transform.position = position;
                 }
 
             }

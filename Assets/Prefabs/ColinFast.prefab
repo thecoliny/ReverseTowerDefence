@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6329856279680531090}
   m_Layer: 0
   m_Name: ColinFast
-  m_TagString: Untagged
+  m_TagString: unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
