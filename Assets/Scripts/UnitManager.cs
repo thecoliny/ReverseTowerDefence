@@ -6,6 +6,13 @@ public class UnitManager : MonoBehaviour
 {
     public GameObject[] units;
     public UIController UIController;
+    [SerializeField] GameObject currencyManager;
+    private CurrencyManagement _currencyManagement;
+
+    private void Start()
+    {
+        _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,10 +30,12 @@ public class UnitManager : MonoBehaviour
             {
                 if (hit.collider.tag == "Path")
                 {
-
-                    Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
-                    GameObject _unit = Instantiate(units[selectedButton - 1]) as GameObject;
-                    _unit.transform.position = position;
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().cost))
+                    {
+                        Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
+                        GameObject _unit = Instantiate(units[selectedButton - 1]) as GameObject;
+                        _unit.transform.position = position;
+                    }
                 }
 
             }

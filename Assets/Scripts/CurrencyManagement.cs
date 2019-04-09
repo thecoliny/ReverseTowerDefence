@@ -6,20 +6,15 @@ public class CurrencyManagement : MonoBehaviour
 {
     public int amount;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        amount = 0;
-    }
-
     public void addCurrency(int amount)
     {
         this.amount += amount;
+        Messenger.Broadcast(GameEvent.CURRENCY_UPDATE);
     }
 
     public bool canAfford(int price)
     {
-        return price < amount;
+        return price <= amount;
     }
 
     public bool spendCurrency(int amount)
@@ -27,6 +22,7 @@ public class CurrencyManagement : MonoBehaviour
         if (canAfford(amount))
         {
             this.amount -= amount;
+            Messenger.Broadcast(GameEvent.CURRENCY_UPDATE);
             return true;
         }
         else
@@ -38,6 +34,6 @@ public class CurrencyManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

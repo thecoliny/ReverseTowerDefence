@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
   health: 2
+  cost: 2
 --- !u!114 &6329856279680531090
 MonoBehaviour:
   m_ObjectHideFlags: 0

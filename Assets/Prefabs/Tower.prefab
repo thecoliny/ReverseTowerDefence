@@ -113,6 +113,7 @@ MonoBehaviour:
   towerRotationSpeed: 8
   projectileRotationSpeed: 8
   projectileSpeed: 8
+  cooldownTime: 1
 --- !u!114 &1156277784114689707
 MonoBehaviour:
   m_ObjectHideFlags: 0

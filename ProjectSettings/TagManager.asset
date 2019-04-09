@@ -12,6 +12,7 @@ TagManager:
   - unit
   - end
   - Currency
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

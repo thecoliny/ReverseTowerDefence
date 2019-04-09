@@ -7,7 +7,10 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
-    [SerializeField] public Text _textLabel;
+    [SerializeField] private Text _scoreLabel;
+    [SerializeField] private Text _currencyLabel;
+    [SerializeField] private GameObject currencyManager;
+    private CurrencyManagement _currencyManagement;
     private int score = 0;
     public int selectedButton;
 
@@ -15,13 +18,16 @@ public class UIController : MonoBehaviour
 
     void Awake()
     {
-        Messenger.AddListener(GameEvent.ENEMY_Passed, UpdateScore);
+        Messenger.AddListener(GameEvent.UNIT_PASSED, UpdateScore);
+        Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
     void Start() {
         button1.onClick.AddListener(clickButton1);
         button2.onClick.AddListener(clickButton2);
         selectedButton = 1;
-        _textLabel.text = "score: " + score;
+        _scoreLabel.text = "Score: " + score;
+        _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
+        _currencyLabel.text = "Currency: " + _currencyManagement.amount;
     }
 
     void clickButton1()
@@ -37,7 +43,12 @@ public class UIController : MonoBehaviour
     private void UpdateScore()
     {
         score++;
-        _textLabel.text = "score: " + score;
+        _scoreLabel.text = "Score: " + score;
+    }
+
+    private void UpdateCurrency()
+    {
+        _currencyLabel.text = "Currency: " + _currencyManagement.amount;
     }
     // Update is called once per frame
     void Update()

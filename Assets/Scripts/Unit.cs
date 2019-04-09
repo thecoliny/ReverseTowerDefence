@@ -11,6 +11,7 @@ public class Unit : MonoBehaviour
     NavMeshAgent agent;
     CurrencyManagement currencyManagement;
     public float health;
+    public int cost;
 
 
     // Start is called before the first frame update
@@ -32,7 +33,7 @@ public class Unit : MonoBehaviour
         if (other.tag == "end")
         {
             Destroy(this.gameObject);
-            Messenger.Broadcast(GameEvent.ENEMY_Passed);
+            Messenger.Broadcast(GameEvent.UNIT_PASSED);
         }
         else if (other.tag == "Projectile")
         {
@@ -44,6 +45,10 @@ public class Unit : MonoBehaviour
         {
             currencyManagement.addCurrency(other.gameObject.GetComponent<CurrencyPickup>().pickupAmount);
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "Checkpoint")
+        {
+            other.gameObject.GetComponent<CurrencyCheckpoint>().reactToCheckpointReach();
         }
     }
     public void ReactToHit(float damage)
