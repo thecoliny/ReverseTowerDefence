@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
+    [SerializeField] public GameObject indicator;
     [SerializeField] private Text _scoreLabel;
     [SerializeField] private Text _currencyLabel;
     [SerializeField] private GameObject currencyManager;
@@ -33,11 +34,13 @@ public class UIController : MonoBehaviour
     void clickButton1()
     {
         selectedButton = 1;
+        indicator.transform.position = new Vector3(615, 568, 0);
     }
 
     void clickButton2()
     {
         selectedButton = 2;
+        indicator.transform.position = new Vector3(615, 535, 0);
     }
     
     private void UpdateScore()

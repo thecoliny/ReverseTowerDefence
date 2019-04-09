@@ -3180,7 +3180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: 295}
+  m_AnchoredPosition: {x: 160.9375, y: 287.5}
   m_SizeDelta: {x: 40, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240787727
@@ -3205,11 +3205,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -10136,6 +10136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button1: {fileID: 727408312}
   button2: {fileID: 270541554}
+  indicator: {fileID: 240787725}
   _scoreLabel: {fileID: 1045672341}
   _currencyLabel: {fileID: 2096509555}
   currencyManager: {fileID: 1975944408}
