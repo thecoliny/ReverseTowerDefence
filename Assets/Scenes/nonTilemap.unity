@@ -25076,7 +25076,12 @@ PrefabInstance:
     - target: {fileID: 3014022778766833668, guid: 7fae509005ed24ea9b48abd157c741ee,
         type: 3}
       propertyPath: attackSpeed
-      value: 4
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014022778766833668, guid: 7fae509005ed24ea9b48abd157c741ee,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fae509005ed24ea9b48abd157c741ee, type: 3}

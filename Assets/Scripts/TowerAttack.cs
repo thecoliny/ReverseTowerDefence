@@ -7,12 +7,12 @@ public class TowerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject units;
     [SerializeField] private GameObject projectilePrefab;
-    private GameObject _projectile;
+    private List<GameObject> _projectiles;
     [SerializeField] private float range;
     [SerializeField] private float towerRotationSpeed;
     [SerializeField] private float projectileRotationSpeed;
     [SerializeField] private float projectileSpeed;
-    [SerializeField] private float attackSpeed;
+    [SerializeField] private float cooldownTime;
     GameObject target = null;
     private bool inRange = false;
     private bool cdReady = true; 
@@ -21,20 +21,30 @@ public class TowerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _projectiles = new List<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Cleanup from potential hits:
+        _projectiles.RemoveAll(x => x==null);
+
+
         if (target == null)
         {
-            Destroy(_projectile);
+            foreach (GameObject projectile in _projectiles)
+            {
+                Destroy(projectile);
+            }
+
         }
         if(target == null || !inRange)
         {
             target = GameObject.FindGameObjectWithTag("unit");
         }
+        if (target != null)
+        {
 
             Vector3 towerLoc = this.transform.position;
             Vector3 targetLoc = target.transform.position;
@@ -52,12 +62,12 @@ public class TowerAttack : MonoBehaviour
                 // spawn a projectile if doesn't exist already
                 if (cdReady)
                 {
-                cdReady = false;
-                _projectile = Instantiate(projectilePrefab) as GameObject;
-                _projectile.transform.position = transform.TransformPoint(Vector3.forward * 0.0f);
-                _projectile.transform.rotation = transform.rotation;
-                StartCoroutine(Wait());
-                    
+                    cdReady = false;
+                    GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
+                    newProjectile.transform.position = transform.TransformPoint(Vector3.forward * 0.0f);
+                    newProjectile.transform.rotation = transform.rotation;
+                    _projectiles.Add(newProjectile);
+                    StartCoroutine(Wait());
                 }
             }
             else
@@ -66,21 +76,20 @@ public class TowerAttack : MonoBehaviour
             }
 
             // update any existing projectiles
-            if (_projectile != null)
-                {
+            foreach (GameObject projectile in _projectiles)
+            {
+                Vector3 projectileDirection = (target.transform.position - projectile.transform.position).normalized;
+                Quaternion projectileLookRotation = Quaternion.LookRotation(projectileDirection);
 
-                    Vector3 projectileDirection = (target.transform.position - _projectile.transform.position).normalized;
-
-                    Quaternion projectileLookRotation = Quaternion.LookRotation(projectileDirection);
-
-                    _projectile.transform.rotation = Quaternion.Slerp(_projectile.transform.rotation, projectileLookRotation, Time.deltaTime * projectileRotationSpeed);
-                    _projectile.transform.position = _projectile.transform.TransformPoint(Vector3.forward * Time.deltaTime * projectileSpeed);
-                }
+                projectile.transform.rotation = Quaternion.Slerp(projectile.transform.rotation, projectileLookRotation, Time.deltaTime * projectileRotationSpeed);
+                projectile.transform.position = projectile.transform.TransformPoint(Vector3.forward * Time.deltaTime * projectileSpeed);
+            }
+        }
     }
 
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(5.0f - attackSpeed);
+        yield return new WaitForSeconds(cooldownTime);
         cdReady = true;
  
     }
