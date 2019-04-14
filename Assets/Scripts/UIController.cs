@@ -23,8 +23,10 @@ public class UIController : MonoBehaviour
         Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
     void Start() {
-        button1.onClick.AddListener(clickButton1);
-        button2.onClick.AddListener(clickButton2);
+        if(button1 != null)
+           button1.onClick.AddListener(clickButton1);
+        if(button2 != null)
+            button2.onClick.AddListener(clickButton2);
         selectedButton = 1;
         _scoreLabel.text = "Score: " + score;
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
