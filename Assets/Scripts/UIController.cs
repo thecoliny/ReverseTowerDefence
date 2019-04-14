@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] public Button button1;
     [SerializeField] public Button button2;
+    [SerializeField] public Button button3;
     [SerializeField] public GameObject indicator;
     [SerializeField] private Text _scoreLabel;
     [SerializeField] private Text _currencyLabel;
@@ -27,6 +28,8 @@ public class UIController : MonoBehaviour
            button1.onClick.AddListener(clickButton1);
         if(button2 != null)
             button2.onClick.AddListener(clickButton2);
+        if (button3 != null)
+            button3.onClick.AddListener(clickButton3);
         selectedButton = 1;
         _scoreLabel.text = "Score: " + score;
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
@@ -36,15 +39,21 @@ public class UIController : MonoBehaviour
     void clickButton1()
     {
         selectedButton = 1;
-        indicator.transform.position = new Vector3(615, 568, 0);
+        indicator.transform.position = new Vector3(615, 600, 0);
     }
 
     void clickButton2()
     {
         selectedButton = 2;
+        indicator.transform.position = new Vector3(615, 568, 0);
+    }
+
+    void clickButton3()
+    {
+        selectedButton = 3;
         indicator.transform.position = new Vector3(615, 535, 0);
     }
-    
+
     private void UpdateScore()
     {
         score++;
