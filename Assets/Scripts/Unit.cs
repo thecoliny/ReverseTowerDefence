@@ -42,6 +42,14 @@ public class Unit : MonoBehaviour
             ReactToHit(stats.damage);
             Destroy(other.gameObject);
         }
+        else if(other.tag == "SlowProjectile")
+        {
+            ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
+            agent.speed = agent.speed * 0.7f;
+            StartCoroutine(Wait());
+            ReactToHit(stats.damage);
+            Destroy(other.gameObject);
+        }
         else if (other.tag == "Currency")
         {
             currencyManagement.addCurrency(other.gameObject.GetComponent<CurrencyPickup>().pickupAmount);
@@ -59,5 +67,12 @@ public class Unit : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.0f);
+        agent.speed = agent.speed / 0.7f;
+
     }
 }
