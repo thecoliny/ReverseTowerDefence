@@ -30,7 +30,7 @@ public class UnitManager : MonoBehaviour
             {
                 if (hit.collider.tag == "Path")
                 {
-                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().cost))
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
                         Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
                         GameObject _unit = Instantiate(units[selectedButton - 1]) as GameObject;

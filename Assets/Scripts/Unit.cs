@@ -10,9 +10,10 @@ public class Unit : MonoBehaviour
     [SerializeField] private Transform target;
     NavMeshAgent agent;
     CurrencyManagement currencyManagement;
-    public float health;
-    public int cost;
-
+    [SerializeField] private float health;
+    [SerializeField] private int cost;
+    public float Health { get { return health; } set { health = value; } }
+    public int Cost { get { return cost; } set { health = value; } }
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class Unit : MonoBehaviour
             other.gameObject.GetComponent<CurrencyCheckpoint>().reactToCheckpointReach();
         }
     }
-    public void ReactToHit(float damage)
+    public virtual void ReactToHit(float damage)
     {
         health -= damage;
         if(health <= 0.0f)
