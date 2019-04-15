@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6404022116296163689}
   - component: {fileID: 6404022116296163690}
   - component: {fileID: 6404022116296163691}
+  - component: {fileID: 4219153824029402576}
   m_Layer: 0
-  m_Name: Field (77)
+  m_Name: Red Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dca4d0f79ca7b46cd93c0a7a9b44dfbf, type: 2}
+  - {fileID: 2100000, guid: 5de9360b6adadc344a43b857d015aabd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,3 +92,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4219153824029402576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404022116296163477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b2f9c51bb4ef6428cd4c32d8adf90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
