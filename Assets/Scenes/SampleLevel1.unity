@@ -97,7 +97,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -105,13 +105,13 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: c036fca9cf7a6405f8239a797b792b67, type: 2}
 --- !u!1001 &3065757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5619,6 +5619,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 27701067}
     m_Modifications:
+    - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: m_Name
+      value: End
+      objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5673,11 +5678,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
-        type: 3}
-      propertyPath: m_Name
-      value: End
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}

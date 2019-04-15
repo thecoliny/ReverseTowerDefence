@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour
 {
 
 
-    [SerializeField] private Transform target;
+    private Transform _target;
     NavMeshAgent agent;
     CurrencyManagement currencyManagement;
     [SerializeField] private float health;
@@ -20,12 +20,13 @@ public class Unit : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         currencyManagement = GameObject.Find("CurrencyManager").GetComponent<CurrencyManagement>();
+        _target = GameObject.Find("End").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        agent.SetDestination(_target.position);
 
     }
 

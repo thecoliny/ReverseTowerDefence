@@ -135,7 +135,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 54
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &6994713211853705603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713a5553ded284f3fa7a655e1c31dc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
   health: 1
   cost: 2
 --- !u!114 &4258974624933062533
