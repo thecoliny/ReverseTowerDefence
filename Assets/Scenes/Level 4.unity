@@ -97,7 +97,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -105,13 +105,13 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: f5a5448bad41f44908b7b528dbb48cdd, type: 2}
 --- !u!1 &189401447
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80197e0f2571d44797620fc5fd293ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  units: []
+  units:
+  - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
+  - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
   UIController: {fileID: 348197132}
   currencyManager: {fileID: 578350077}
 --- !u!4 &518223831
@@ -3500,6 +3502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: End
+      objectReference: {fileID: 0}
+    - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
