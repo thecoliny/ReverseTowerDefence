@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: c036fca9cf7a6405f8239a797b792b67, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8e6ccd0aa0d2f4a9690ed01cf08c7a66, type: 2}
 --- !u!1001 &3065757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20102,5 +20102,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 182642954}
+    - target: {fileID: 1239165684378609788, guid: eacda51b6ab7b59468f6184b078c03f3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eacda51b6ab7b59468f6184b078c03f3, type: 3}

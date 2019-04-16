@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 659566876357133901}
   - component: {fileID: 659566876357133902}
   - component: {fileID: 659566876357133903}
-  - component: {fileID: 3530639243122591968}
+  - component: {fileID: 1877830275250171153}
   m_Layer: 0
   m_Name: SlowTower
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fb521181c2744c94bb20c2405081793b, type: 2}
+  - {fileID: 2100000, guid: 364c335c057e8234a91db269995ed510, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   projectileRotationSpeed: 8
   projectileSpeed: 8
   cooldownTime: 1
---- !u!114 &3530639243122591968
+--- !u!114 &1877830275250171153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +123,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 659566876357133872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14237a12243a534438d3b9b9f80f534d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a7b780664c853a4ca8179491d154360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
