@@ -14,9 +14,9 @@ public class MommyUnit : Unit
             Vector3 _position = this.transform.position;
             Destroy(this.gameObject);
             GameObject _baby1 = Instantiate(baby) as GameObject;
+            _baby1.transform.position = _position;
             GameObject _baby2 = Instantiate(baby) as GameObject;
             GameObject _baby3 = Instantiate(baby) as GameObject;
-            _baby1.transform.position = _position;
             _baby2.transform.position = _position;
             _baby3.transform.position = _position;
         }
