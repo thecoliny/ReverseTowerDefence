@@ -27,6 +27,7 @@ public class UIController : MonoBehaviour
         Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
     void Start() {
+        canvas.Open();
         winning.Close();
         if(button1 != null)
            button1.onClick.AddListener(clickButton1);
