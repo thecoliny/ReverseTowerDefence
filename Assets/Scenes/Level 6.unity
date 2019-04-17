@@ -2990,6 +2990,11 @@ PrefabInstance:
       propertyPath: currencyManager
       value: 
       objectReference: {fileID: 80734536}
+    - target: {fileID: 1187090175722791644, guid: 2258625f5ea9e41fda50b3d70f3063bc,
+        type: 3}
+      propertyPath: _UIController
+      value: 
+      objectReference: {fileID: 1082974073}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2258625f5ea9e41fda50b3d70f3063bc, type: 3}
 --- !u!1001 &1385693382

@@ -66,7 +66,12 @@ public class UIController : MonoBehaviour
     private void UpdateScore()
     {
         score++;
-        _scoreLabel.text = "Score: " + score + "/" + passingScore;
+        if (!_scoreLabel)
+        {
+            Debug.Log("SCORE LABEL NOT FOUND"); // TODO: score label not being found, but somehow still updates label??
+            return;
+        }
+            _scoreLabel.text = "Score: " + score + "/" + passingScore; /* TODO: This Text is getting destroyed! */
         if (score >= passingScore)
         {
             canvas.Close();

@@ -646,7 +646,7 @@ MonoBehaviour:
   units:
   - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
   - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
-  UIController: {fileID: 239683756}
+  _UIController: {fileID: 239683756}
   currencyManager: {fileID: 578350077}
 --- !u!4 &518223831
 Transform:
@@ -1483,11 +1483,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 227776745807181575, guid: d2a98cfb49b4de94fbc70ab4cda0b661,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 227776745173870317, guid: d2a98cfb49b4de94fbc70ab4cda0b661,
         type: 3}
       propertyPath: currencyManager
@@ -1502,6 +1497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: passingScore
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 227776745807181575, guid: d2a98cfb49b4de94fbc70ab4cda0b661,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a98cfb49b4de94fbc70ab4cda0b661, type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitManager : MonoBehaviour
 {
     public GameObject[] units;
-    public UIController UIController;
+    [SerializeField] private UIController _UIController;
     [SerializeField] GameObject currencyManager;
     private CurrencyManagement _currencyManagement;
 
@@ -18,7 +18,7 @@ public class UnitManager : MonoBehaviour
     void Update()
     {
 
-        int selectedButton = UIController.getButton();
+        int selectedButton = _UIController.getButton();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -40,26 +40,6 @@ public class UnitManager : MonoBehaviour
 
             }
 
-        }/*
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.tag == "Path")
-                {
-
-                    Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
-                    GameObject _tower = Instantiate(towers[1]) as GameObject;
-                    _tower.transform.position = position;
-                    _tower.transform.SetParent(units.transform);
-                }
-
-            }
-
-        }*/
+        }
     }
 }
