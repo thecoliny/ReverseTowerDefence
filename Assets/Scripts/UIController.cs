@@ -12,9 +12,12 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text _scoreLabel;
     [SerializeField] private Text _currencyLabel;
     [SerializeField] private GameObject currencyManager;
+    [SerializeField] private int passingScore;
+    [SerializeField] private UIPopup winning;
+    [SerializeField] private UIPopup canvas;
     private CurrencyManagement _currencyManagement;
     private int score = 0;
-    public int selectedButton;
+    private int selectedButton;
 
     // Start is called before the first frame update
 
@@ -24,6 +27,7 @@ public class UIController : MonoBehaviour
         Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
     void Start() {
+        winning.Close();
         if(button1 != null)
            button1.onClick.AddListener(clickButton1);
         if(button2 != null)
@@ -31,7 +35,7 @@ public class UIController : MonoBehaviour
         if (button3 != null)
             button3.onClick.AddListener(clickButton3);
         selectedButton = 1;
-        _scoreLabel.text = "Score: " + score;
+        _scoreLabel.text = "Score: " + score + "/" + passingScore;
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
         _currencyLabel.text = "Currency: " + _currencyManagement.amount;
     }
@@ -54,10 +58,20 @@ public class UIController : MonoBehaviour
         indicator.transform.position = new Vector3(615, 535, 0);
     }
 
+    public int getButton()
+    {
+        return selectedButton;
+    }
+
     private void UpdateScore()
     {
         score++;
-        _scoreLabel.text = "Score: " + score;
+        _scoreLabel.text = "Score: " + score + "/" + passingScore;
+        if (score >= passingScore)
+        {
+            canvas.Close();
+            winning.Open();
+        }
     }
 
     private void UpdateCurrency()

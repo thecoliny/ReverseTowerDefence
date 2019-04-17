@@ -11,14 +11,16 @@ public class MommyUnit : Unit
          Health = Health - damage;
         if (Health <= 0.0f)
         {
-            Vector3 _position = this.transform.position;
+            Vector3 _position1 = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+            Vector3 _position2 = new Vector3(this.transform.position.x + 1f , this.transform.position.y, this.transform.position.z + 1f);
+            Vector3 _position3 = new Vector3(this.transform.position.x - 1f, this.transform.position.y, this.transform.position.z - 1f);
             Destroy(this.gameObject);
             GameObject _baby1 = Instantiate(baby) as GameObject;
-            _baby1.transform.position = _position;
             GameObject _baby2 = Instantiate(baby) as GameObject;
             GameObject _baby3 = Instantiate(baby) as GameObject;
-            _baby2.transform.position = _position;
-            _baby3.transform.position = _position;
+            _baby1.transform.position = _position1;
+            _baby2.transform.position = _position2;
+            _baby3.transform.position = _position3;
         }
     }
 }

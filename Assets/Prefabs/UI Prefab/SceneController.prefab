@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1187090175722791645
+--- !u!1 &5631610800548630334
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1187090175722791643}
-  - component: {fileID: 1187090175722791644}
+  - component: {fileID: 5631610800548630335}
+  - component: {fileID: 6683345714742060779}
   m_Layer: 0
-  m_Name: UnitManager
+  m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1187090175722791643
+--- !u!4 &5631610800548630335
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187090175722791645}
+  m_GameObject: {fileID: 5631610800548630334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6182108, y: 1.2792634, z: 2.9426258}
+  m_LocalPosition: {x: 568.7134, y: 257.81876, z: -7.609964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187090175722791644
+--- !u!114 &6683345714742060779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187090175722791645}
+  m_GameObject: {fileID: 5631610800548630334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80197e0f2571d44797620fc5fd293ab, type: 3}
+  m_Script: {fileID: 11500000, guid: fc937a9c54215f6428a2dfe4047abd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  units:
-  - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
-  - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
-  - {fileID: 5832522554784578178, guid: 65ff7f172fa2b2041b062f42f6f350c0, type: 3}
-  UIController: {fileID: 0}
-  currencyManager: {fileID: 9086187328579396271, guid: 9679c3906374149b8999e72305c27400,
-    type: 3}

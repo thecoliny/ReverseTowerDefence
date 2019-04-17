@@ -18,12 +18,12 @@ public class UnitManager : MonoBehaviour
     void Update()
     {
 
-        int selectedButton = UIController.selectedButton;
+        int selectedButton = UIController.getButton();
 
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+             
             RaycastHit hit;
 
             if(Physics.Raycast(ray, out hit))
