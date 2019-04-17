@@ -3149,7 +3149,7 @@ MonoBehaviour:
   units:
   - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
   - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
-  UIController: {fileID: 282735818}
+  _UIController: {fileID: 282735818}
   currencyManager: {fileID: 500430566}
 --- !u!4 &1645013206
 Transform:

@@ -510,7 +510,7 @@ MonoBehaviour:
   units:
   - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
   - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
-  UIController: {fileID: 227776744484365916}
+  _UIController: {fileID: 227776744484365916}
   currencyManager: {fileID: 578350077}
 --- !u!4 &518223831
 Transform:
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3d6eb657f649d69b3e29d0d849367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 10
+  amount: 30
 --- !u!4 &578350079
 Transform:
   m_ObjectHideFlags: 0
@@ -3798,7 +3798,7 @@ MonoBehaviour:
   _scoreLabel: {fileID: 227776745145608774}
   _currencyLabel: {fileID: 227776744919889454}
   currencyManager: {fileID: 578350077}
-  passingScore: 5
+  passingScore: 3
   winning: {fileID: 5177015513418337444}
   canvas: {fileID: 227776746023647114}
 --- !u!1 &227776744484365918
