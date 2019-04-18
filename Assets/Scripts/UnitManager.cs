@@ -32,9 +32,9 @@ public class UnitManager : MonoBehaviour
                 {
                     if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
-                        Vector3 position = new Vector3(hit.collider.gameObject.transform.position.x, 5, hit.collider.gameObject.transform.position.z);
-                        GameObject _unit = Instantiate(units[selectedButton - 1]) as GameObject;
-                        _unit.transform.position = position;
+                        
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
+                        
                     }
                 }
 

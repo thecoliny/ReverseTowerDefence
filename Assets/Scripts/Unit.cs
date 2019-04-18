@@ -39,17 +39,17 @@ public class Unit : MonoBehaviour
         }
         else if (other.tag == "Projectile")
         {
+            Destroy(other.gameObject);
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
             ReactToHit(stats.damage);
-            Destroy(other.gameObject);
         }
         else if(other.tag == "SlowProjectile")
         {
+            Destroy(other.gameObject);
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
-            agent.speed = agent.speed * 0.7f;
+            agent.speed = agent.speed * 0.4f;
             StartCoroutine(Wait());
             ReactToHit(stats.damage);
-            Destroy(other.gameObject);
         }
         else if (other.tag == "Currency")
         {
@@ -73,7 +73,7 @@ public class Unit : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(2.0f);
-        agent.speed = agent.speed / 0.7f;
+        agent.speed = agent.speed / 0.4f;
 
     }
 }

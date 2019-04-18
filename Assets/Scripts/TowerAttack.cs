@@ -65,6 +65,7 @@ public class TowerAttack : MonoBehaviour
                     cdReady = false;
                     GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
                     newProjectile.transform.position = transform.TransformPoint(Vector3.forward * 0.0f);
+                    newProjectile.transform.Translate(0.0f, -0.1f, 0.0f);
                     newProjectile.transform.rotation = transform.rotation;
                     _projectiles.Add(newProjectile);
                     StartCoroutine(Wait());
