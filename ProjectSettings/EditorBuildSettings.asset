@@ -4,17 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: [{enabled: 1, path: Assets/Scenes/Level 1.unity, guid: a4e9458fefa019e4a9f0380a8928cb77},
-    {enabled: 1, path: Assets/Scenes/Level 2.unity, guid: e228b05f2cc9770489099a3c29c5524c},
-    {enabled: 1, path: Assets/Scenes/Level 3.unity, guid: 7d2c617e6e0d9114e9ee3cbdf765da34},
-    {enabled: 1, path: Assets/Scenes/Level 4.unity, guid: 27e34113f13f75745ac64ea76a263a48},
-    {enabled: 1, path: Assets/Scenes/Level 5.unity, guid: fa91a1cdff2553d4fa3b591a433571e6},
-    {enabled: 1, path: Assets/Scenes/Level 6.unity, guid: 7c9654a3215404e449be939b1460db08},
-    {enabled: 1, path: Assets/Scenes/Level N.unity, guid: 314e0f2ba3e3345468ea0fb74788bfcd},
-    {enabled: 1, path: Assets/Scenes/Level 1.unity, guid: a4e9458fefa019e4a9f0380a8928cb77},
-    {enabled: 1, path: Assets/Scenes/Level 2.unity, guid: 1b8d9eb110ac8fb4cbac18337baf66ee},
-    {enabled: 1, path: Assets/Scenes/Level 3.unity, guid: 7d2c617e6e0d9114e9ee3cbdf765da34},
-    {enabled: 1, path: Assets/Scenes/Level 4.unity, guid: 27e34113f13f75745ac64ea76a263a48},
-    {enabled: 1, path: Assets/Scenes/Level 5.unity, guid: fa91a1cdff2553d4fa3b591a433571e6},
-    {enabled: 1, path: Assets/Scenes/Level 6.unity, guid: 7c9654a3215404e449be939b1460db08}]
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: a4e9458fefa019e4a9f0380a8928cb77
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: e228b05f2cc9770489099a3c29c5524c
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 7d2c617e6e0d9114e9ee3cbdf765da34
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 27e34113f13f75745ac64ea76a263a48
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: fa91a1cdff2553d4fa3b591a433571e6
+  - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: 7c9654a3215404e449be939b1460db08
+  - enabled: 1
+    path: Assets/Scenes/Level N.unity
+    guid: 314e0f2ba3e3345468ea0fb74788bfcd
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 370854a99d5581544a8ee563d4fd5fcc
   m_configObjects: {}
