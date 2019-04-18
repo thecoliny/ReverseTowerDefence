@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] public Button button1;
-    [SerializeField] public Button button2;
-    [SerializeField] public Button button3;
-    [SerializeField] public GameObject indicator;
+    [SerializeField] private bool button1Active;
+    [SerializeField] private bool button2Active;
+    [SerializeField] private bool button3Active;
+    [SerializeField] private Button button1;
+    [SerializeField] private Button button2;
+    [SerializeField] private Button button3;
+    [SerializeField] private GameObject indicator;
     [SerializeField] private Text _scoreLabel;
     [SerializeField] private Text _currencyLabel;
     [SerializeField] private GameObject currencyManager;
@@ -29,12 +32,32 @@ public class UIController : MonoBehaviour
     void Start() {
         canvas.Open();
         winning.Close();
-        if(button1 != null)
-           button1.onClick.AddListener(clickButton1);
-        if(button2 != null)
+
+        if (button1Active)
+        {
+            button1.onClick.AddListener(clickButton1);
+        }
+        else
+        {
+            button1.gameObject.SetActive(false);
+        }
+        if (button2Active)
+        {
             button2.onClick.AddListener(clickButton2);
-        if (button3 != null)
+        }
+        else
+        {
+            button2.gameObject.SetActive(false);
+        }
+        if (button3Active)
+        {
             button3.onClick.AddListener(clickButton3);
+        }
+        else
+        {
+            button3.gameObject.SetActive(false);
+        }
+
         selectedButton = 1;
         _scoreLabel.text = "Score: " + score + "/" + passingScore;
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
