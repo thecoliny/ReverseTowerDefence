@@ -14,7 +14,6 @@ public class TowerAttack : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     [SerializeField] private float cooldownTime;
     GameObject target = null;
-    private bool inRange = false;
     private bool cdReady = true; 
 
 
@@ -39,9 +38,16 @@ public class TowerAttack : MonoBehaviour
             }
 
         }
-        if(target == null || !inRange)
+        if(target == null || !InRange(target))
         {
-            target = GameObject.FindGameObjectWithTag("unit");
+            GameObject[] temp_targets = GameObject.FindGameObjectsWithTag("unit");
+            foreach(GameObject temp_target in temp_targets)
+            {
+                if (InRange(temp_target))
+                {
+                    target = temp_target;
+                }
+            }
         }
         if (target != null)
         {
@@ -56,12 +62,9 @@ public class TowerAttack : MonoBehaviour
 
 
             // If tower in range...
-            if (range * range > towerToTarget.sqrMagnitude)
+            if (InRange(target) && cdReady)
             {
-                inRange = true;
                 // spawn a projectile if doesn't exist already
-                if (cdReady)
-                {
                     cdReady = false;
                     GameObject newProjectile = Instantiate(projectilePrefab) as GameObject;
                     newProjectile.transform.position = transform.TransformPoint(Vector3.forward * 0.0f);
@@ -69,11 +72,6 @@ public class TowerAttack : MonoBehaviour
                     newProjectile.transform.rotation = transform.rotation;
                     _projectiles.Add(newProjectile);
                     StartCoroutine(Wait());
-                }
-            }
-            else
-            {
-                inRange = false;
             }
 
             // update any existing projectiles
@@ -86,6 +84,14 @@ public class TowerAttack : MonoBehaviour
                 projectile.transform.position = projectile.transform.TransformPoint(Vector3.forward * Time.deltaTime * projectileSpeed);
             }
         }
+    }
+
+    private bool InRange(GameObject target)
+    {
+        Vector3 towerLoc = this.transform.position;
+        Vector3 targetLoc = target.transform.position;
+        Vector3 towerToTarget = targetLoc - towerLoc;
+        return range * range > towerToTarget.sqrMagnitude;
     }
 
     private IEnumerator Wait()

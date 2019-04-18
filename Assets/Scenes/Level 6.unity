@@ -19932,7 +19932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3d6eb657f649d69b3e29d0d849367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 20
+  amount: 40
 --- !u!4 &9086187328643173354
 Transform:
   m_ObjectHideFlags: 0

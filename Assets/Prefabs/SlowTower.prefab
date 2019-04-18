@@ -109,7 +109,7 @@ MonoBehaviour:
   units: {fileID: 0}
   projectilePrefab: {fileID: 6962924584875911435, guid: 603ba5396070f0745a5c25d64985359d,
     type: 3}
-  range: 100
+  range: 5
   towerRotationSpeed: 8
   projectileRotationSpeed: 8
   projectileSpeed: 8
