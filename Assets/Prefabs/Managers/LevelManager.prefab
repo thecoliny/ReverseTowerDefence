@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8298862906190596493}
+  - component: {fileID: 4248303860423948269}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -37,6 +38,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4248303860423948269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298862906190596494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1276621867b4dd5a340496a606a225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingCurrency: 0
+  colinActive: 0
+  fastColinActive: 0
+  mommyActive: 0
+  nextLevelName: 
+  passingScore: 0
 --- !u!1001 &2783300913991660920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,18 +131,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2783300913991660920}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8298862907126096625 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6164089470880880521, guid: c94f5bd769c654fc9b7a9ae159b39a88,
-    type: 3}
-  m_PrefabInstance: {fileID: 2783300913991660920}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc937a9c54215f6428a2dfe4047abd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8298862906247088157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,11 +734,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8298862907126096625}
+      objectReference: {fileID: 4248303860423948269}
     - target: {fileID: 5177015514068715677, guid: 3927469b16cff7c4da4e13ca6521fa89,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177015514068715677, guid: 3927469b16cff7c4da4e13ca6521fa89,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5177015513047173501, guid: 3927469b16cff7c4da4e13ca6521fa89,
         type: 3}

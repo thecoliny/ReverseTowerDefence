@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class CurrencyManagement : MonoBehaviour
 {
-    public int amount;
+    [System.NonSerialized] public int amount;
+    private LevelManager _levelManager;
+
+    public void Start()
+    {
+        _levelManager = this.GetComponentInParent<LevelManager>();
+        this.amount = _levelManager.startingCurrency;
+        Messenger.Broadcast(GameEvent.CURRENCY_UPDATE);
+    }
 
     public void addCurrency(int amount)
     {
@@ -29,11 +37,5 @@ public class CurrencyManagement : MonoBehaviour
         {
             return false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

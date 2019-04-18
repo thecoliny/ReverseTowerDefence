@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private bool button1Active;
-    [SerializeField] private bool button2Active;
-    [SerializeField] private bool button3Active;
+    private bool button1Active;
+    private bool button2Active;
+    private bool button3Active;
     [SerializeField] private Button button1;
     [SerializeField] private Button button2;
     [SerializeField] private Button button3;
@@ -15,9 +15,10 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text _scoreLabel;
     [SerializeField] private Text _currencyLabel;
     [SerializeField] private GameObject currencyManager;
-    [SerializeField] private int passingScore;
+    private int passingScore;
     [SerializeField] private UIPopup winning;
     [SerializeField] private UIPopup canvas;
+    private LevelManager levelManager;
     private CurrencyManagement _currencyManagement;
     private int score = 0;
     private int selectedButton;
@@ -30,6 +31,13 @@ public class UIController : MonoBehaviour
         Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
     void Start() {
+        levelManager = transform.GetComponentInParent<LevelManager>();
+
+        button1Active = levelManager.colinActive;
+        button2Active = levelManager.fastColinActive;
+        button3Active = levelManager.mommyActive;
+        passingScore = levelManager.passingScore;
+
         canvas.Open();
         winning.Close();
 
