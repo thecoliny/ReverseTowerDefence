@@ -27,6 +27,7 @@ public class UIController : MonoBehaviour
 
     void Awake()
     {
+        _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
         Messenger.AddListener(GameEvent.UNIT_PASSED, UpdateScore);
         Messenger.AddListener(GameEvent.CURRENCY_UPDATE, UpdateCurrency);
     }
@@ -68,8 +69,6 @@ public class UIController : MonoBehaviour
 
         selectedButton = 1;
         _scoreLabel.text = "Score: " + score + "/" + passingScore;
-        _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
-        _currencyLabel.text = "Currency: " + _currencyManagement.amount;
     }
 
     void clickButton1()
