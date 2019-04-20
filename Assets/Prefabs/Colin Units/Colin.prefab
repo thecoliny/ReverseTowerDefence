@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6570364303385280152}
   - component: {fileID: 6570364303385280155}
   - component: {fileID: 8809620072136220578}
+  - component: {fileID: 2749888462168376162}
   m_Layer: 0
   m_Name: Colin
   m_TagString: unit
@@ -162,3 +163,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7b780664c853a4ca8179491d154360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2749888462168376162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570364303385280226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4719ec61f623f4ca8acce37f717e6a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: 
+  description: 
