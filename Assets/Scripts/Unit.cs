@@ -70,6 +70,16 @@ public class Unit : MonoBehaviour
         }
     }
 
+    private void OnLevelPause()
+    {
+
+    }
+
+    private void OnLevelUnpause()
+    {
+
+    }
+
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(2.0f);
