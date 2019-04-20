@@ -1165,6 +1165,11 @@ PrefabInstance:
       propertyPath: currencyManager
       value: 
       objectReference: {fileID: 951355614681328306}
+    - target: {fileID: 1187090175722791644, guid: 2258625f5ea9e41fda50b3d70f3063bc,
+        type: 3}
+      propertyPath: tutorialManager
+      value: 
+      objectReference: {fileID: 8414322687682165344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2258625f5ea9e41fda50b3d70f3063bc, type: 3}
 --- !u!4 &7156817812427597093 stripped

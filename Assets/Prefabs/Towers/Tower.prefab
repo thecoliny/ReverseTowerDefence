@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3014022778766833669}
   - component: {fileID: 3014022778766833668}
   - component: {fileID: 4003935186541453630}
+  - component: {fileID: 6400167412088358120}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7b780664c853a4ca8179491d154360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6400167412088358120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014022778766833787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d857af581584b61b7419d8fad6f718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Tower
+  description: A basic Tower. It shoots, Colin get hurt.
+  sprite: {fileID: 21300000, guid: 7133780ce8e14e1448644672ce840c47, type: 3}

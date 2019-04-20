@@ -7,6 +7,7 @@ public class UnitManager : MonoBehaviour
     public GameObject[] units;
     [SerializeField] private UIController _UIController;
     [SerializeField] GameObject currencyManager;
+    [SerializeField] TutorialManager tutorialManager;
     private CurrencyManagement _currencyManagement;
 
     private void Start()
@@ -28,13 +29,23 @@ public class UnitManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.tag == "Path")
+                if (tutorialManager.isTutorialModeActive())
                 {
-                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                    if (hit.collider.tag == "Tower" || hit.collider.tag == "unit")
                     {
-                        
-                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
-                        
+                        tutorialManager.showTutorial(hit.collider.gameObject.GetComponent<TutorialObject>());
+                    }
+                }
+                else
+                {
+                    if (hit.collider.tag == "Path")
+                    {
+                        if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                        {
+
+                            GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
+
+                        }
                     }
                 }
 
