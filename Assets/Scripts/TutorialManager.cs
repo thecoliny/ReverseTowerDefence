@@ -5,18 +5,22 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     private TutorialObject currentTutorialObject;
-    private TutorialUI tutorialUI;
+    [SerializeField] private TutorialUI tutorialUI;
     private bool tutorialActive;
+    private bool tutorialModeActive;
 
     public void setCurrentTutorialObject(TutorialObject currentTutorialObject)
     {
         this.currentTutorialObject = currentTutorialObject;
 
-        tutorialUI.image.sprite = currentTutorialObject.sprite;
-        tutorialUI.objectName.text = currentTutorialObject.objectName;
-        tutorialUI.type.text = currentTutorialObject.ObjectType;
-        tutorialUI.description.text = currentTutorialObject.description;
-        tutorialUI.stats.text = string.Join("\n", currentTutorialObject.Stats.ToArray());
+        if (currentTutorialObject != null)
+        {
+            tutorialUI.image.sprite = currentTutorialObject.sprite;
+            tutorialUI.objectName.text = currentTutorialObject.objectName;
+            tutorialUI.type.text = currentTutorialObject.getObjectType();
+            tutorialUI.description.text = currentTutorialObject.description;
+            tutorialUI.stats.text = string.Join("\n", currentTutorialObject.getStats().ToArray());
+        }
     }
 
     public void showTutorial(TutorialObject tutorialObject)
@@ -30,4 +34,20 @@ public class TutorialManager : MonoBehaviour
         this.currentTutorialObject = null;
         tutorialActive = false;
     }
+
+    public void activateTutorialMode() {
+        tutorialModeActive = true;
+    }
+
+    public void deactivateTutorialMode()
+    {
+        tutorialModeActive = false;
+    }
+
+    public void toggleTutorialMode()
+    {
+        tutorialModeActive = !tutorialModeActive;
+    }
+
+    public bool isTutorialModeActive() { return tutorialModeActive; }
 }

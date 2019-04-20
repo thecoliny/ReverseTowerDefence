@@ -8,9 +8,28 @@ public class TutorialObject : MonoBehaviour
     [SerializeField] public string description;
     [SerializeField] public Sprite sprite;
 
-    public List<string> Stats { get; set; }
+    private List<string> stats;
+    private string objectType;
 
-    public string ObjectType { get; set; }
+    public List<string> getStats()
+    {
+        return stats;
+    }
+    public string getObjectType()
+    {
+        return objectType;
+    }
+
+    public void setObjectType(string objectType)
+    {
+        this.objectType = objectType;
+    }
+
+    public void setStats(List<string> stats)
+    {
+        this.stats = stats;
+    }
+
 
 
 }

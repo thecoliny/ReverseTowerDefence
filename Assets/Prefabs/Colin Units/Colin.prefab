@@ -175,5 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4719ec61f623f4ca8acce37f717e6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: 
-  description: 
+  objectName: Colin
+  description: Everyone's favorite, the classic Colin!
+  sprite: {fileID: 21300000, guid: 5f4245b23e0edb44290606a2bf394589, type: 3}
