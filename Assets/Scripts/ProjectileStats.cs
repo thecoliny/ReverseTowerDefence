@@ -5,4 +5,5 @@ using UnityEngine;
 public class ProjectileStats : MonoBehaviour
 {
     public float damage;
+    public float slowRatio;
 }

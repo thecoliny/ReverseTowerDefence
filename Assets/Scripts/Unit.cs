@@ -12,6 +12,8 @@ public class Unit : MonoBehaviour
     CurrencyManagement currencyManagement;
     [SerializeField] private float health;
     [SerializeField] private int cost;
+    [SerializeField] private int speed;
+    private int slowCount;
     public float Health { get { return health; } set { health = value; } }
     public int Cost { get { return cost; } set { health = value; } }
 
@@ -21,6 +23,9 @@ public class Unit : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currencyManagement = GameObject.Find("CurrencyManager").GetComponent<CurrencyManagement>();
         _target = GameObject.Find("End").transform;
+
+        agent.speed = speed;
+        slowCount = 0;
     }
 
     // Update is called once per frame
@@ -47,8 +52,8 @@ public class Unit : MonoBehaviour
         {
             Destroy(other.gameObject);
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
-            agent.speed = agent.speed * 0.4f;
-            StartCoroutine(Wait());
+            agent.speed = speed * stats.slowRatio;
+            StartCoroutine(WaitAndUnslow());
             ReactToHit(stats.damage);
         }
         else if (other.tag == "Currency")
@@ -80,10 +85,16 @@ public class Unit : MonoBehaviour
 
     }
 
-    private IEnumerator Wait()
+    private IEnumerator WaitAndUnslow()
     {
+        slowCount++;
         yield return new WaitForSeconds(2.0f);
-        agent.speed = agent.speed / 0.4f;
+        slowCount--;
+        if (slowCount == 0)
+        {
+            agent.speed = speed;
+        }
+
 
     }
 }

@@ -6,13 +6,13 @@ using UnityEngine.AI;
 public class TowerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject units;
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] public GameObject projectilePrefab;
     private List<GameObject> _projectiles;
-    [SerializeField] private float range;
-    [SerializeField] private float towerRotationSpeed;
+    [SerializeField] public float range;
+    [SerializeField] public float towerRotationSpeed;
     [SerializeField] private float projectileRotationSpeed;
-    [SerializeField] private float projectileSpeed;
-    [SerializeField] private float cooldownTime;
+    [SerializeField] public float projectileSpeed;
+    [SerializeField] public float cooldownTime;
     GameObject target = null;
     private bool cdReady = true; 
 
