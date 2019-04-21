@@ -77,7 +77,7 @@ public class UIController : MonoBehaviour
     {
         if (tutorialManager.isTutorialModeActive())
         {
-            tutorialManager.showTutorial(unitManager.units[0].GetComponent<TutorialObject>());
+            tutorialManager.showTutorial(unitManager.units[0].GetComponent<TutorialUnit>());
         }
         else
         {
@@ -90,7 +90,7 @@ public class UIController : MonoBehaviour
     {
         if (tutorialManager.isTutorialModeActive())
         {
-            tutorialManager.showTutorial(unitManager.units[1].GetComponent<TutorialObject>());
+            tutorialManager.showTutorial(unitManager.units[1].GetComponent<TutorialUnit>());
         }
         else
         {
@@ -103,7 +103,7 @@ public class UIController : MonoBehaviour
     {
         if (tutorialManager.isTutorialModeActive())
         {
-            tutorialManager.showTutorial(unitManager.units[2].GetComponent<TutorialObject>());
+            tutorialManager.showTutorial(unitManager.units[2].GetComponent<TutorialUnit>());
         }
         else
         {

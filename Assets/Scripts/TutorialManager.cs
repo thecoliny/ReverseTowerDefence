@@ -19,7 +19,11 @@ public class TutorialManager : MonoBehaviour
             tutorialUI.objectName.text = currentTutorialObject.objectName;
             tutorialUI.type.text = currentTutorialObject.getObjectType();
             tutorialUI.description.text = currentTutorialObject.description;
-            tutorialUI.stats.text = string.Join("\n", currentTutorialObject.getStats().ToArray());
+            tutorialUI.stats.text = string.Join("\n", currentTutorialObject.GetStats().ToArray());
+        }
+        else
+        {
+            Debug.LogWarning("Warning! Current Tutorial Object Set to null.");
         }
     }
 

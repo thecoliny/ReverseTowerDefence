@@ -11,7 +11,7 @@ public class TutorialObject : MonoBehaviour
     private List<string> stats;
     private string objectType;
 
-    public List<string> getStats()
+    public virtual List<string> GetStats()
     {
         return stats;
     }

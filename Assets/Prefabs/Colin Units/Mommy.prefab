@@ -179,3 +179,5 @@ MonoBehaviour:
   objectName: Mommy Colin
   description: A Mommy Colin with her babies!
   sprite: {fileID: 21300000, guid: a882b160c76fba24682fb7d1de3b19a7, type: 3}
+  unit: {fileID: 7908887208722454229}
+  agent: {fileID: 5832522554784578296}
