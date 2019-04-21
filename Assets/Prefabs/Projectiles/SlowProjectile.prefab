@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  slowRatio: 0.4
 --- !u!114 &5494718605795404436
 MonoBehaviour:
   m_ObjectHideFlags: 0

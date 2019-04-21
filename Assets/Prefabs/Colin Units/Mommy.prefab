@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   cost: 3
+  speed: 1
   baby: {fileID: 6994713211853705600, guid: 273723b3c62310740b81de0477103577, type: 3}
 --- !u!114 &4477581599144851762
 MonoBehaviour:
