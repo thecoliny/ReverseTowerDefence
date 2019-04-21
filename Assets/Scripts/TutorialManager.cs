@@ -9,7 +9,7 @@ public class TutorialManager : MonoBehaviour
     private bool tutorialActive;
     private bool tutorialModeActive;
 
-    public void setCurrentTutorialObject(TutorialObject currentTutorialObject)
+    private void setCurrentTutorialObject(TutorialObject currentTutorialObject)
     {
         this.currentTutorialObject = currentTutorialObject;
 
@@ -30,12 +30,14 @@ public class TutorialManager : MonoBehaviour
     public void showTutorial(TutorialObject tutorialObject)
     {
         setCurrentTutorialObject(tutorialObject);
+        tutorialUI.Open();
         tutorialActive = true;
     }
 
     public void closeTutorial()
     {
         this.currentTutorialObject = null;
+        tutorialUI.Close();
         tutorialActive = false;
     }
 
