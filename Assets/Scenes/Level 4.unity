@@ -964,6 +964,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: startingCurrency
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: colinActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: fastColinActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: passingScore
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: nextLevelName
+      value: Level 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507463453525183165, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 951355614681328307, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: amount
@@ -987,31 +1017,6 @@ PrefabInstance:
     - target: {fileID: 3815410859477282691, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: startingCurrency
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: colinActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: fastColinActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: passingScore
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: nextLevelName
       value: Level 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

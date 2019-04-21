@@ -6,23 +6,32 @@ public class CurrencyCheckpoint : MonoBehaviour
 {
     [SerializeField] private GameObject currencyManager;
     [SerializeField] private int initialBonus;
-    [SerializeField] private int perUnitBonus;
-    private bool _reached;
     private CurrencyManagement _currencyManagement;
+    private int count;
     // Start is called before the first frame update
     void Start()
     {
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
-        _reached = false;
+        count = 0;
     }
 
     public void reactToCheckpointReach()
     {
-        if (!_reached)
+        if(initialBonus > 0)
         {
             _currencyManagement.addCurrency(initialBonus);
-            _reached = true;
+            if (initialBonus != 1)
+            {
+                initialBonus--;
+            }
+            else
+            {
+                count++;
+                if (count >= 5)
+                {
+                    initialBonus--;
+                }
+            }
         }
-        _currencyManagement.addCurrency(perUnitBonus);
     }
 }
