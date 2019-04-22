@@ -21,4 +21,9 @@ public class LevelManager : MonoBehaviour
         _sceneController.Next(nextLevelName);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
