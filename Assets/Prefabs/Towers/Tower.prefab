@@ -141,4 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Tower
   description: A basic Tower. It shoots, Colin get hurt.
-  sprite: {fileID: 21300000, guid: 7133780ce8e14e1448644672ce840c47, type: 3}
+  sprite: {fileID: 21300000, guid: 3a58fdc9c596bfb44931cd419ead67cc, type: 3}

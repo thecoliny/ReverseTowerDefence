@@ -178,6 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Fast Colin
   description: The speediest Colin you've never laid eyes on!
-  sprite: {fileID: 21300000, guid: c07031898c67a35469f3f3026edced4c, type: 3}
+  sprite: {fileID: 21300000, guid: 3605b333d35d0f044a2b0388baf07def, type: 3}
   unit: {fileID: 995567095501425812}
   agent: {fileID: 995567095501425813}

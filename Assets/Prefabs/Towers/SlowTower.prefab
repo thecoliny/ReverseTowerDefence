@@ -141,4 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Slowing Tower
   description: Watch out, this tower will slow your Colin down!
-  sprite: {fileID: 21300000, guid: 9a8eb5c0f9b9e4046a46fbc1c6b2fb00, type: 3}
+  sprite: {fileID: 21300000, guid: 51ce019d04860c0438af059bf68b9455, type: 3}

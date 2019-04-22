@@ -6,6 +6,7 @@ public class CurrencyCheckpoint : MonoBehaviour
 {
     [SerializeField] private GameObject currencyManager;
     [SerializeField] private int initialBonus;
+    [SerializeField] private TextMesh label;
     private CurrencyManagement _currencyManagement;
     private int count;
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class CurrencyCheckpoint : MonoBehaviour
     {
         _currencyManagement = currencyManager.GetComponent<CurrencyManagement>();
         count = 0;
+        label.text = initialBonus.ToString();
     }
 
     public void reactToCheckpointReach()
@@ -33,5 +35,6 @@ public class CurrencyCheckpoint : MonoBehaviour
                 }
             }
         }
+        label.text = initialBonus.ToString();
     }
 }

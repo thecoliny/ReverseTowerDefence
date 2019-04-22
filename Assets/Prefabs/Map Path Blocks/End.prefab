@@ -106,4 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: End Block
   description: Get your Colin to this block to score points and move to the next level!
-  sprite: {fileID: 21300000, guid: faa82f3f8c0a3b2439ca9a0b72de7b6b, type: 3}
+  sprite: {fileID: 21300000, guid: 4a8af7fe13c36644ba049a3cc9582dde, type: 3}

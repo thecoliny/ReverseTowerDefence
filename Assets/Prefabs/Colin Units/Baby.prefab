@@ -178,6 +178,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: Baby Colin
   description: Awww! A little baby Colin! So cute!
-  sprite: {fileID: 21300000, guid: ab660fa0f2cca1f409bcd882e24c74ec, type: 3}
+  sprite: {fileID: 21300000, guid: 6b948417020a65b42ad8d4fc536fb4cd, type: 3}
   unit: {fileID: 6994713211853705603}
   agent: {fileID: 6994713211853705602}
