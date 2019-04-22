@@ -809,6 +809,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8200541011169148681, guid: 5f034d766c1da0648a304c85ae353b60,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Score: 0/0'
+      objectReference: {fileID: 0}
     - target: {fileID: 8200541010283518753, guid: 5f034d766c1da0648a304c85ae353b60,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -947,6 +952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Winning
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177015513339385886, guid: 3927469b16cff7c4da4e13ca6521fa89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5177015513339385881, guid: 3927469b16cff7c4da4e13ca6521fa89,
         type: 3}

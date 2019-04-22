@@ -7,7 +7,7 @@ public class StartMenuManager : MonoBehaviour
 {
     [SerializeField] private string firstLevel;
 
-    private void goToFirstLevel()
+    public void goToFirstLevel()
     {
         SceneManager.LoadScene(firstLevel);
     }

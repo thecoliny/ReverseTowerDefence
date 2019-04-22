@@ -42,6 +42,16 @@ public class Unit : MonoBehaviour
             Destroy(this.gameObject);
             Messenger.Broadcast(GameEvent.UNIT_PASSED);
         }
+        else if (other.tag == "playGameEnd")
+        {
+            Destroy(this.gameObject);
+            GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onPlayGame();
+        }
+        else if (other.tag == "quitGameEnd")
+        {
+            Destroy(this.gameObject);
+            GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onQuitGame();
+        }
         else if (other.tag == "Projectile")
         {
             Destroy(other.gameObject);
