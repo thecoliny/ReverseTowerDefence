@@ -5818,7 +5818,7 @@ PrefabInstance:
     - target: {fileID: 4646483340855600807, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_Size.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600807, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
@@ -18368,6 +18368,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1913888021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1921267140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 208668897385713701, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8298862907007973095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1921267145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921267140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa2eef3babb740d097bc6f40adc589f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialManager: {fileID: 0}
+  unit: {fileID: 0}
 --- !u!1001 &1943531596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20185,11 +20205,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8081665404347501265, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: button1Active
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: startingCurrency
@@ -20214,6 +20229,16 @@ PrefabInstance:
         type: 3}
       propertyPath: nextLevelName
       value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507463453525183165, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081665404347501265, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: button1Active
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6916245721752385774, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -20269,11 +20294,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 32.80001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6507463453525183165, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9a005dd69b946709f8f20f2a3df64a, type: 3}

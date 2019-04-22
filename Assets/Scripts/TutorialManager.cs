@@ -6,7 +6,8 @@ public class TutorialManager : MonoBehaviour
 {
     private TutorialObject currentTutorialObject;
     [SerializeField] private TutorialUI tutorialUI;
-    private bool tutorialActive;
+    private bool buttonTutorialActive;
+    private bool colliderTutorialActive;
     private bool tutorialModeActive;
 
     private void setCurrentTutorialObject(TutorialObject currentTutorialObject)
@@ -27,33 +28,69 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    public void showTutorial(TutorialObject tutorialObject)
+    private void showTutorial(TutorialObject tutorialObject)
     {
         setCurrentTutorialObject(tutorialObject);
         tutorialUI.Open();
-        tutorialActive = true;
     }
 
-    public void closeTutorial()
+    public void showColliderTutorial(TutorialObject tutorialObject)
+    {
+        colliderTutorialActive = true;
+        showTutorial(tutorialObject);
+    }
+
+    public void showButtonTutorial(TutorialObject tutorialObject)
+    {
+        buttonTutorialActive = true;
+        showTutorial(tutorialObject);
+    }
+
+    private void closeTutorial()
     {
         this.currentTutorialObject = null;
         tutorialUI.Close();
-        tutorialActive = false;
     }
 
-    public void activateTutorialMode() {
-        tutorialModeActive = true;
-    }
-
-    public void deactivateTutorialMode()
+    private void attemptCloseTutorial()
     {
-        tutorialModeActive = false;
+        if (!colliderTutorialActive && !buttonTutorialActive)
+        {
+            closeTutorial();
+        }
     }
 
-    public void toggleTutorialMode()
+    public void closeButtonTutorial()
     {
-        tutorialModeActive = !tutorialModeActive;
+        buttonTutorialActive = false;
+        attemptCloseTutorial();
     }
 
-    public bool isTutorialModeActive() { return tutorialModeActive; }
+    public void closeColliderTutorial()
+    {
+        colliderTutorialActive = false;
+        attemptCloseTutorial();
+    }
+
+
+    public void Update()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.tag == "Tower" || hit.collider.tag == "unit" || hit.collider.tag == "end" || hit.collider.tag == "Checkpoint")
+            {
+                showColliderTutorial(hit.collider.gameObject.GetComponent<TutorialObject>());
+            }
+
+            if (hit.collider.tag == "Path" || hit.collider.tag == "Untagged")
+            {
+                closeColliderTutorial();
+            }
+
+        }
+    }
 }

@@ -651,17 +651,17 @@ PrefabInstance:
         type: 3}
       propertyPath: button1
       value: 
-      objectReference: {fileID: 208668897385713703}
+      objectReference: {fileID: 5189152669199353890}
     - target: {fileID: 219739621461611961, guid: 054ad503f0e873f4daecfa0ff596a802,
         type: 3}
       propertyPath: button2
       value: 
-      objectReference: {fileID: 208668897240618895}
+      objectReference: {fileID: 3588194818014189391}
     - target: {fileID: 219739621461611961, guid: 054ad503f0e873f4daecfa0ff596a802,
         type: 3}
       propertyPath: button3
       value: 
-      objectReference: {fileID: 129600534141418029}
+      objectReference: {fileID: 7747245258026207227}
     - target: {fileID: 219739621461611961, guid: 054ad503f0e873f4daecfa0ff596a802,
         type: 3}
       propertyPath: tutorialManager
@@ -855,11 +855,11 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8200541010290844356, guid: 5f034d766c1da0648a304c85ae353b60, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5f034d766c1da0648a304c85ae353b60, type: 3}
---- !u!114 &208668897240618895 stripped
+--- !u!114 &3588194818014189391 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8200541010538092783, guid: 5f034d766c1da0648a304c85ae353b60,
+  m_CorrespondingSourceObject: {fileID: 4819045069769431087, guid: 5f034d766c1da0648a304c85ae353b60,
     type: 3}
   m_PrefabInstance: {fileID: 8298862907825213280}
   m_PrefabAsset: {fileID: 0}
@@ -869,9 +869,9 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &129600534141418029 stripped
+--- !u!114 &7747245258026207227 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8279609699954160973, guid: 5f034d766c1da0648a304c85ae353b60,
+  m_CorrespondingSourceObject: {fileID: 1776887050128918683, guid: 5f034d766c1da0648a304c85ae353b60,
     type: 3}
   m_PrefabInstance: {fileID: 8298862907825213280}
   m_PrefabAsset: {fileID: 0}
@@ -911,9 +911,9 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &208668897385713703 stripped
+--- !u!114 &5189152669199353890 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8200541010834448199, guid: 5f034d766c1da0648a304c85ae353b60,
+  m_CorrespondingSourceObject: {fileID: 4262913248823838530, guid: 5f034d766c1da0648a304c85ae353b60,
     type: 3}
   m_PrefabInstance: {fileID: 8298862907825213280}
   m_PrefabAsset: {fileID: 0}

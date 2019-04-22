@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4646483340855600805}
   - component: {fileID: 4646483340855600804}
   - component: {fileID: 4646483340855600807}
+  - component: {fileID: 7727353075527611351}
   m_Layer: 0
   m_Name: End
   m_TagString: end
@@ -91,3 +92,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7727353075527611351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646483340855600806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9f02ff0f4b449fc8b6a0a01df6c23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: End Block
+  description: Get your Colin to this block to score points and move to the next level!
+  sprite: {fileID: 21300000, guid: faa82f3f8c0a3b2439ca9a0b72de7b6b, type: 3}

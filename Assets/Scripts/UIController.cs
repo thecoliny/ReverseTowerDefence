@@ -47,6 +47,10 @@ public class UIController : MonoBehaviour
         if (button1Active)
         {
             button1.onClick.AddListener(clickButton1);
+            UnitButton unitButton1 = button1.gameObject.GetComponent<UnitButton>();
+            unitButton1.tutorialManager = tutorialManager;
+            unitButton1.unit = unitManager.units[0].gameObject;
+            
         }
         else
         {
@@ -55,6 +59,9 @@ public class UIController : MonoBehaviour
         if (button2Active)
         {
             button2.onClick.AddListener(clickButton2);
+            UnitButton unitButton2 = button2.gameObject.GetComponent<UnitButton>();
+            unitButton2.tutorialManager = tutorialManager;
+            unitButton2.unit = unitManager.units[1].gameObject;
         }
         else
         {
@@ -63,6 +70,9 @@ public class UIController : MonoBehaviour
         if (button3Active)
         {
             button3.onClick.AddListener(clickButton3);
+            UnitButton unitButton3 = button3.gameObject.GetComponent<UnitButton>();
+            unitButton3.tutorialManager = tutorialManager;
+            unitButton3.unit = unitManager.units[2].gameObject;
         }
         else
         {
@@ -75,41 +85,20 @@ public class UIController : MonoBehaviour
 
     void clickButton1()
     {
-        if (tutorialManager.isTutorialModeActive())
-        {
-            tutorialManager.showTutorial(unitManager.units[0].GetComponent<TutorialUnit>());
-        }
-        else
-        {
-            selectedButton = 1;
-            indicator.transform.position = new Vector3(615, 600, 0);
-        }
+        selectedButton = 1;
+        indicator.transform.position = new Vector3(615, 600, 0);
     }
 
     void clickButton2()
     {
-        if (tutorialManager.isTutorialModeActive())
-        {
-            tutorialManager.showTutorial(unitManager.units[1].GetComponent<TutorialUnit>());
-        }
-        else
-        {
-            selectedButton = 2;
-            indicator.transform.position = new Vector3(615, 568, 0);
-        }
+        selectedButton = 2;
+        indicator.transform.position = new Vector3(615, 568, 0);
     }
 
     void clickButton3()
     {
-        if (tutorialManager.isTutorialModeActive())
-        {
-            tutorialManager.showTutorial(unitManager.units[2].GetComponent<TutorialUnit>());
-        }
-        else
-        {
-            selectedButton = 3;
-            indicator.transform.position = new Vector3(615, 535, 0);
-        }
+        selectedButton = 3;
+        indicator.transform.position = new Vector3(615, 535, 0);
     }
 
     public int getButton()

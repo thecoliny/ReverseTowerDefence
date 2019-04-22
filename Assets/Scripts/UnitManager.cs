@@ -29,26 +29,15 @@ public class UnitManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if (tutorialManager.isTutorialModeActive())
+                if (hit.collider.tag == "Path")
                 {
-                    if (hit.collider.tag == "Tower" || hit.collider.tag == "unit")
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
-                        tutorialManager.showTutorial(hit.collider.gameObject.GetComponent<TutorialObject>());
+
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
+
                     }
                 }
-                else
-                {
-                    if (hit.collider.tag == "Path")
-                    {
-                        if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
-                        {
-
-                            GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
-
-                        }
-                    }
-                }
-
             }
 
         }
