@@ -112,7 +112,7 @@ MonoBehaviour:
     type: 3}
   range: 5
   towerRotationSpeed: 8
-  projectileRotationSpeed: 8
+  projectileRotationSpeed: 100
   projectileSpeed: 8
   cooldownTime: 2
 --- !u!114 &1877830275250171153
