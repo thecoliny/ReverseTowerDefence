@@ -538,8 +538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa2eef3babb740d097bc6f40adc589f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialManager: {fileID: 0}
-  unit: {fileID: 0}
 --- !u!1 &8200541010581776383
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,8 +896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa2eef3babb740d097bc6f40adc589f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialManager: {fileID: 0}
-  unit: {fileID: 0}
 --- !u!1 &8200541011169148695
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,8 +930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 315.2}
-  m_SizeDelta: {x: 160, y: 29.6}
+  m_AnchoredPosition: {x: -250.7, y: 302.35}
+  m_SizeDelta: {x: 194.9, y: 44.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8200541011169148680
 CanvasRenderer:
@@ -958,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.88235295, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -967,14 +963,14 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
+    m_FontSize: 5
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1013,8 +1009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 266.8}
-  m_SizeDelta: {x: 160, y: 26.4}
+  m_AnchoredPosition: {x: -23.2, y: 302.35}
+  m_SizeDelta: {x: 193.3, y: 44.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8200541011420029792
 CanvasRenderer:
@@ -1037,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.88335323, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1046,14 +1042,14 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
+    m_FontSize: 15
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1268,5 +1264,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa2eef3babb740d097bc6f40adc589f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialManager: {fileID: 0}
-  unit: {fileID: 0}

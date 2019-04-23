@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public bool fastColinActive;
     public bool mommyActive;
     public string nextLevelName;
+    public string thisLevelName;
     public int passingScore;
     private SceneController _sceneController;
 
@@ -17,6 +18,10 @@ public class LevelManager : MonoBehaviour
         _sceneController = this.transform.GetComponentInChildren<SceneController>();
     }
 
+    public void Restart()
+    {
+        _sceneController.Next(thisLevelName);
+    }
     public void Next() {
         _sceneController.Next(nextLevelName);
     }

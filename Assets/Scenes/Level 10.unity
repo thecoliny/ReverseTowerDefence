@@ -2060,6 +2060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple Path (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8963604735232743253, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8963604735232743257, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4958,6 +4963,11 @@ PrefabInstance:
       propertyPath: nextLevelName
       value: Level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: thisLevelName
+      value: Level 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6507463453525183165, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -5062,6 +5072,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Purple Path (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963604735232743253, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8963604735232743257, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
         type: 3}
@@ -5458,6 +5473,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple Path (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8963604735232743253, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8963604735232743257, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5537,6 +5557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Purple Path (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963604735232743253, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8963604735232743257, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
         type: 3}
@@ -7295,7 +7320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881887460}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.12, y: 5, z: 6.42}
+  m_LocalPosition: {x: 6, y: 5, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
