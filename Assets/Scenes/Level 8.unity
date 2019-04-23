@@ -3310,6 +3310,11 @@ PrefabInstance:
       propertyPath: currencyManager
       value: 
       objectReference: {fileID: 448982192}
+    - target: {fileID: 1925437315559847834, guid: a4d2ab4995ab47143adbc5927142ee07,
+        type: 3}
+      propertyPath: initialBonus
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d2ab4995ab47143adbc5927142ee07, type: 3}
 --- !u!1001 &846962160
@@ -6456,6 +6461,11 @@ PrefabInstance:
       propertyPath: currencyManager
       value: 
       objectReference: {fileID: 448982192}
+    - target: {fileID: 1925437315559847834, guid: a4d2ab4995ab47143adbc5927142ee07,
+        type: 3}
+      propertyPath: initialBonus
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4d2ab4995ab47143adbc5927142ee07, type: 3}
 --- !u!1001 &1966887634
