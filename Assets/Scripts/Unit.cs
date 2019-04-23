@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour
     CurrencyManagement currencyManagement;
     [SerializeField] private float health;
     [SerializeField] private int cost;
-    [SerializeField] private int speed;
+    [SerializeField] private float speed;
     private int slowCount;
     public float Health { get { return health; } set { health = value; } }
     public int Cost { get { return cost; } set { health = value; } }

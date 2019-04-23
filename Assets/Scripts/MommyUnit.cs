@@ -14,19 +14,22 @@ public class MommyUnit : Unit
             float posX = this.transform.position.x;
             float posY = this.transform.position.y;
             float posZ = this.transform.position.z;
+
             Vector3 _position1 = this.transform.position;
-            Vector3 _position2 = this.transform.position + this.transform.forward;
-            Vector3 _position3 = this.transform.position + this.transform.forward * -1;
+            //Vector3 _position2 = new Vector3(posX + 0.5f, posY, posZ + 0.5f);
+            //Vector3 _position3 = new Vector3(posX - 0.5f, posY, posZ - 0.5f);
+            Vector3 _position2 = this.transform.position + this.transform.forward * 0.5f;
+            Vector3 _position3 = this.transform.position + this.transform.forward * - 0.5f;
             Destroy(this.gameObject);
-            GameObject _baby1 = Instantiate(baby) as GameObject;
-            GameObject _baby2 = Instantiate(baby) as GameObject;
-            GameObject _baby3 = Instantiate(baby) as GameObject;
-            _baby1.transform.position = _position1;
-            _baby1.transform.rotation = this.transform.rotation;
-            _baby2.transform.position = _position2;
-            _baby2.transform.rotation = this.transform.rotation;
-            _baby3.transform.position = _position3;
-            _baby3.transform.rotation = this.transform.rotation;
+            GameObject _baby1 = Instantiate(baby, _position1, this.transform.rotation) as GameObject;
+            GameObject _baby2 = Instantiate(baby, _position2, this.transform.rotation) as GameObject;
+            GameObject _baby3 = Instantiate(baby, _position3, this.transform.rotation) as GameObject;
+           // _baby1.transform.position = _position1;
+            //_baby1.transform.rotation = this.transform.rotation;
+            //_baby2.transform.position = _position4;
+           // _baby2.transform.rotation = this.transform.rotation;
+           // _baby3.transform.position = _position5;
+            //_baby3.transform.rotation = this.transform.rotation;
         }
     }
 }
