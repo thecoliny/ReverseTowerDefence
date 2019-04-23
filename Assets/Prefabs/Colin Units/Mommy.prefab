@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Mommy Colin
-  description: 'A Mommy Colin with her babies! What happen when it dies? '
+  description: 'A Mommy Colin! But where are her babies? '
   sprite: {fileID: 21300000, guid: 274cf790fe329fa45a2a310760b95e9e, type: 3}
   unit: {fileID: 7908887208722454229}
   agent: {fileID: 5832522554784578296}
