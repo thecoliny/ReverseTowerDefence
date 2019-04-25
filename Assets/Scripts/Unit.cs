@@ -54,17 +54,27 @@ public class Unit : MonoBehaviour
         }
         else if (other.tag == "Projectile")
         {
-            Destroy(other.gameObject);
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
-            ReactToHit(stats.damage);
+
+            if (!stats.hit)
+            {
+                stats.hit = true;
+                ReactToHit(stats.damage);
+                Destroy(other.gameObject);
+            }
         }
         else if(other.tag == "SlowProjectile")
         {
-            Destroy(other.gameObject);
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
-            agent.speed = speed * stats.slowRatio;
-            StartCoroutine(WaitAndUnslow());
-            ReactToHit(stats.damage);
+
+            if (!stats.hit)
+            {
+                stats.hit = true;
+                agent.speed = speed * stats.slowRatio;
+                StartCoroutine(WaitAndUnslow());
+                ReactToHit(stats.damage);
+                Destroy(other.gameObject);
+            }
         }
         else if (other.tag == "Currency")
         {
