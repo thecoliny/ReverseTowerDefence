@@ -47,6 +47,24 @@ public class UnitManager : MonoBehaviour
 
                     }
                 }
+                else if (hit.collider.tag == "PathU")
+                {
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                    {
+
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.forward)) as GameObject;
+
+                    }
+                }
+                else if (hit.collider.tag == "PathD")
+                {
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                    {
+
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.back)) as GameObject;
+
+                    }
+                }
             }
 
         }
