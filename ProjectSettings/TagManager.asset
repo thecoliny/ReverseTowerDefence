@@ -18,6 +18,8 @@ TagManager:
   - playGameEnd
   - quitGameEnd
   - PathL
+  - PathD
+  - PathU
   layers:
   - Default
   - TransparentFX

@@ -89,6 +89,14 @@ public class Unit : MonoBehaviour
         {
             agent.transform.rotation = Quaternion.LookRotation(Vector3.left);
         }
+        else if (other.tag == "PathU")
+        {
+            agent.transform.rotation = Quaternion.LookRotation(Vector3.forward);
+        }
+        else if (other.tag == "PathD")
+        {
+            agent.transform.rotation = Quaternion.LookRotation(Vector3.back);
+        }
     }
     public virtual void ReactToHit(float damage)
     {
