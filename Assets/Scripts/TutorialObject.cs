@@ -30,6 +30,14 @@ public class TutorialObject : MonoBehaviour
         this.stats = stats;
     }
 
+    public virtual void onShow() { 
+    
+    }
+
+    public virtual void onClose()
+    {
+
+    }
 
 
 }

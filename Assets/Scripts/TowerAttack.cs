@@ -13,6 +13,8 @@ public class TowerAttack : MonoBehaviour
     [SerializeField] private float projectileRotationSpeed;
     [SerializeField] public float projectileSpeed;
     [SerializeField] public float cooldownTime;
+    [SerializeField] private Sprite rangeIndicatorSprite;
+    private GameObject _rangeIndicator;
     GameObject target = null;
     private bool cdReady = true; 
 
@@ -21,6 +23,15 @@ public class TowerAttack : MonoBehaviour
     void Start()
     {
         _projectiles = new List<GameObject>();
+
+        _rangeIndicator = new GameObject();
+        _rangeIndicator.SetActive(false);
+        _rangeIndicator.transform.position = transform.position;
+        _rangeIndicator.transform.localEulerAngles = new Vector3(90, 0, 0);
+        SpriteRenderer rangeIndicatorSpriteRenderer = _rangeIndicator.AddComponent<SpriteRenderer>();
+        rangeIndicatorSpriteRenderer.sprite = rangeIndicatorSprite;
+        rangeIndicatorSpriteRenderer.drawMode = SpriteDrawMode.Simple;
+        rangeIndicatorSpriteRenderer.transform.localScale = new Vector3(range * 2, range * 2, 1);
     }
 
     // Update is called once per frame
@@ -100,4 +111,13 @@ public class TowerAttack : MonoBehaviour
         cdReady = true;
  
     }
+
+    public void showRangeIndicator() {
+        _rangeIndicator.SetActive(true);
+    }
+
+    public void hideRangeIndicator() {
+        _rangeIndicator.SetActive(false);
+    }
+
 }

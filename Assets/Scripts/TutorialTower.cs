@@ -29,4 +29,16 @@ public class TutorialTower : TutorialObject
             "Cooldown: " + cooldownTime
         });
     }
+
+    public override void onClose()
+    {
+        base.onClose();
+        towerAttack.hideRangeIndicator();
+    }
+
+    public override void onShow()
+    {
+        base.onShow();
+        towerAttack.showRangeIndicator();
+    }
 }

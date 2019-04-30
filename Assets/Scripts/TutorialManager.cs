@@ -31,6 +31,7 @@ public class TutorialManager : MonoBehaviour
     private void showTutorial(TutorialObject tutorialObject)
     {
         setCurrentTutorialObject(tutorialObject);
+        tutorialObject.onShow();
         tutorialUI.Open();
     }
 
@@ -48,6 +49,10 @@ public class TutorialManager : MonoBehaviour
 
     private void closeTutorial()
     {
+        if (currentTutorialObject != null)
+        {
+            currentTutorialObject.onClose();
+        }
         this.currentTutorialObject = null;
         tutorialUI.Close();
     }

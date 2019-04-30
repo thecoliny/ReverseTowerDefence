@@ -115,6 +115,8 @@ MonoBehaviour:
   projectileRotationSpeed: 100
   projectileSpeed: 8
   cooldownTime: 2
+  rangeIndicatorSprite: {fileID: 21300000, guid: a04e14d6c35414c6586914c524d84bca,
+    type: 3}
 --- !u!114 &1877830275250171153
 MonoBehaviour:
   m_ObjectHideFlags: 0
