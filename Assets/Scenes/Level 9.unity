@@ -5652,6 +5652,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Area (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4374538501833154892, guid: 92fb2ee60d273254d81cbb8a6d749359,
+        type: 3}
+      propertyPath: m_TagString
+      value: PathL
+      objectReference: {fileID: 0}
     - target: {fileID: 6854648856786966681, guid: 92fb2ee60d273254d81cbb8a6d749359,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6377,6 +6382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Area (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4374538501833154892, guid: 92fb2ee60d273254d81cbb8a6d749359,
+        type: 3}
+      propertyPath: m_TagString
+      value: PathL
+      objectReference: {fileID: 0}
     - target: {fileID: 6854648856786966681, guid: 92fb2ee60d273254d81cbb8a6d749359,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6445,6 +6455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawn Area (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374538501833154892, guid: 92fb2ee60d273254d81cbb8a6d749359,
+        type: 3}
+      propertyPath: m_TagString
+      value: PathL
       objectReference: {fileID: 0}
     - target: {fileID: 6854648856786966681, guid: 92fb2ee60d273254d81cbb8a6d749359,
         type: 3}

@@ -112,7 +112,7 @@ MonoBehaviour:
     type: 3}
   range: 4.5
   towerRotationSpeed: 8
-  projectileRotationSpeed: 100
+  projectileRotationSpeed: 8
   projectileSpeed: 8
   cooldownTime: 2
   rangeIndicatorSprite: {fileID: 21300000, guid: a04e14d6c35414c6586914c524d84bca,

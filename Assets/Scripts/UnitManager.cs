@@ -34,7 +34,16 @@ public class UnitManager : MonoBehaviour
                     if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
 
-                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(new Vector3(1, 0, 0))) as GameObject;
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.right)) as GameObject;
+
+                    }
+                }
+                else if (hit.collider.tag == "PathL")
+                {
+                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                    {
+
+                        GameObject _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.left)) as GameObject;
 
                     }
                 }

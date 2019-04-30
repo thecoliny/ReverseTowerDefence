@@ -17,6 +17,7 @@ TagManager:
   - Tower
   - playGameEnd
   - quitGameEnd
+  - PathL
   layers:
   - Default
   - TransparentFX
