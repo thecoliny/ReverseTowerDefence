@@ -1157,7 +1157,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currencyManager
       value: 
-      objectReference: {fileID: 1448335992}
+      objectReference: {fileID: 0}
     - target: {fileID: 1925437315559847834, guid: a4d2ab4995ab47143adbc5927142ee07,
         type: 3}
       propertyPath: initialBonus
@@ -1644,7 +1644,7 @@ PrefabInstance:
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: startingCurrency
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -1664,7 +1664,7 @@ PrefabInstance:
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: passingScore
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -1675,11 +1675,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 951355614681328307, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: amount
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8081665404347501265, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -1700,6 +1695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: button3Active
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951355614681328307, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: amount
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3815410859477282691, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -3138,7 +3138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currencyManager
       value: 
-      objectReference: {fileID: 1448335992}
+      objectReference: {fileID: 0}
     - target: {fileID: 1925437315559847834, guid: a4d2ab4995ab47143adbc5927142ee07,
         type: 3}
       propertyPath: initialBonus
@@ -3550,12 +3550,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8963604735232743257, guid: 0689c76a9bd99ee428d48dc03fc7bed2,
     type: 3}
   m_PrefabInstance: {fileID: 1416635976}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1448335992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 951355614681328306, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-    type: 3}
-  m_PrefabInstance: {fileID: 542673254}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1519579807
 PrefabInstance:

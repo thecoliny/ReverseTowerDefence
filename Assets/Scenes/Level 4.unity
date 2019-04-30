@@ -1036,7 +1036,7 @@ PrefabInstance:
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: startingCurrency
-      value: 17
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4248303860423948269, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
@@ -1073,11 +1073,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 951355614681328307, guid: 6d9a005dd69b946709f8f20f2a3df64a,
-        type: 3}
-      propertyPath: amount
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 8081665404347501265, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
       propertyPath: passingScore
@@ -1092,6 +1087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: button1Active
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951355614681328307, guid: 6d9a005dd69b946709f8f20f2a3df64a,
+        type: 3}
+      propertyPath: amount
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3815410859477282691, guid: 6d9a005dd69b946709f8f20f2a3df64a,
         type: 3}
