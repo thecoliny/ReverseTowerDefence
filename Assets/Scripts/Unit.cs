@@ -85,6 +85,10 @@ public class Unit : MonoBehaviour
         {
             other.gameObject.GetComponent<CurrencyCheckpoint>().reactToCheckpointReach();
         }
+        else if (other.tag == "PathL")
+        {
+            agent.transform.rotation = Quaternion.LookRotation(Vector3.left);
+        }
     }
     public virtual void ReactToHit(float damage)
     {
