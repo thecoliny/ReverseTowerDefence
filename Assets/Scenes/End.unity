@@ -4027,7 +4027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Reached the Arvicolony!
+  m_Text: You Reached the Arvicoliny!
 --- !u!222 &1853326219
 CanvasRenderer:
   m_ObjectHideFlags: 0
