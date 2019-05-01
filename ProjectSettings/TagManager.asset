@@ -20,6 +20,7 @@ TagManager:
   - PathL
   - PathD
   - PathU
+  - Waypoint
   layers:
   - Default
   - TransparentFX

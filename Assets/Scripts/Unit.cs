@@ -7,12 +7,19 @@ public class Unit : MonoBehaviour
 {
 
 
-    private Transform _target;
+    public Transform _target;
     NavMeshAgent agent;
     CurrencyManagement currencyManagement;
+    WaypointManager waypointManager;
     [SerializeField] private float health;
     [SerializeField] private int cost;
     [SerializeField] private float speed;
+
+    [System.NonSerialized] public bool shouldFollowWaypoint;
+    [System.NonSerialized] public bool followingWaypoint;
+    [System.NonSerialized] public int currentWaypoint;
+    [System.NonSerialized] public int nextWaypoint;
+
     private int slowCount;
     public float Health { get { return health; } set { health = value; } }
     public int Cost { get { return cost; } set { health = value; } }
@@ -23,7 +30,6 @@ public class Unit : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currencyManagement = GameObject.Find("CurrencyManager").GetComponent<CurrencyManagement>();
         _target = GameObject.Find("End").transform;
-
         agent.speed = speed;
         slowCount = 0;
     }
@@ -31,6 +37,14 @@ public class Unit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (followingWaypoint)
+        {
+            if (waypointManager == null) {
+                waypointManager = GameObject.Find("Waypoints").GetComponent<WaypointManager>();
+            }
+
+            _target = waypointManager.waypoints[nextWaypoint].transform;
+        }
         agent.SetDestination(_target.position);
 
     }
@@ -39,18 +53,25 @@ public class Unit : MonoBehaviour
     {
         if (other.tag == "end")
         {
-            Destroy(this.gameObject);
             Messenger.Broadcast(GameEvent.UNIT_PASSED);
+            Destroy(this.gameObject);
+        }
+        else if (other.tag == "Waypoint")
+        {
+            if (other.transform == _target)
+            {
+                onWaypointPassed();
+            }
         }
         else if (other.tag == "playGameEnd")
         {
-            Destroy(this.gameObject);
             GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onPlayGame();
+            Destroy(this.gameObject);
         }
         else if (other.tag == "quitGameEnd")
         {
-            Destroy(this.gameObject);
             GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onQuitGame();
+            Destroy(this.gameObject);
         }
         else if (other.tag == "Projectile")
         {
@@ -85,18 +106,6 @@ public class Unit : MonoBehaviour
         {
             other.gameObject.GetComponent<CurrencyCheckpoint>().reactToCheckpointReach();
         }
-        else if (other.tag == "PathL")
-        {
-            agent.transform.rotation = Quaternion.LookRotation(Vector3.left);
-        }
-        else if (other.tag == "PathU")
-        {
-            agent.transform.rotation = Quaternion.LookRotation(Vector3.forward);
-        }
-        else if (other.tag == "PathD")
-        {
-            agent.transform.rotation = Quaternion.LookRotation(Vector3.back);
-        }
     }
     public virtual void ReactToHit(float damage)
     {
@@ -114,6 +123,28 @@ public class Unit : MonoBehaviour
 
     private void OnLevelUnpause()
     {
+
+    }
+
+    public void setNormalEnd()
+    {
+
+    }
+
+    public void setCustomEnd(Transform transform)
+    {
+        _target = transform;
+    }
+
+    private void onWaypointPassed()
+    {
+        currentWaypoint = nextWaypoint;
+        //transform.position = waypointManager.waypoints[currentWaypoint].transform.position;
+
+        do
+        {
+            nextWaypoint = Random.Range(0, waypointManager.waypoints.Length);
+        } while (currentWaypoint == nextWaypoint);
 
     }
 
