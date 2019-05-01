@@ -288,7 +288,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Authors: Marcus Daly, Mitran Kwatra, Kai Wang, Jacob Rich'
+  m_Text: 'Authors: Marcus Daly, Mitran Kwatra, Kai Wang, Jacob Rich
+
+    Music: A New Beginning from Bensound.com'
 --- !u!222 &33398953
 CanvasRenderer:
   m_ObjectHideFlags: 0
