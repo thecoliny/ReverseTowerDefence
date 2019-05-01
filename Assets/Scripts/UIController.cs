@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour
     private CurrencyManagement _currencyManagement;
     private int score = 0;
     private int selectedButton;
+    private int indicatorXCoord = 805;
 
     // Start is called before the first frame update
 
@@ -43,6 +44,8 @@ public class UIController : MonoBehaviour
 
         canvas.Open();
         winning.Close();
+
+        indicator.transform.position = new Vector3(indicatorXCoord, button1.transform.position.y - 5, 0);
 
         if (button1Active)
         {
@@ -86,19 +89,19 @@ public class UIController : MonoBehaviour
     void clickButton1()
     {
         selectedButton = 1;
-        indicator.transform.position = new Vector3(615, 600, 0);
+        indicator.transform.position = new Vector3(indicatorXCoord, button1.transform.position.y - 5, 0);
     }
 
     void clickButton2()
     {
         selectedButton = 2;
-        indicator.transform.position = new Vector3(615, 568, 0);
+        indicator.transform.position = new Vector3(indicatorXCoord, button2.transform.position.y - 5, 0);
     }
 
     void clickButton3()
     {
         selectedButton = 3;
-        indicator.transform.position = new Vector3(615, 535, 0);
+        indicator.transform.position = new Vector3(indicatorXCoord, button3.transform.position.y - 5, 0);
     }
 
     public int getButton()
