@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4744494322861214464}
   - component: {fileID: 2540428174004536122}
   - component: {fileID: 3788717546881682266}
+  - component: {fileID: 3324206355736174526}
   m_Layer: 0
   m_Name: Spawn Area
   m_TagString: Path
@@ -105,6 +106,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7b780664c853a4ca8179491d154360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3324206355736174526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374538501833154892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1696c19e1fac541f3b702c5e4a19137d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end: {fileID: 0}
+  spawnFacingDirection: right
 --- !u!1 &8942494399994485905
 GameObject:
   m_ObjectHideFlags: 0

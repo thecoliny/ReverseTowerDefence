@@ -29,41 +29,30 @@ public class UnitManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
+
                 if (hit.collider.tag == "Path")
                 {
-                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
+                    SpawnArea spawnArea = hit.collider.gameObject.GetComponent<SpawnArea>();
+                    Vector3 direction = Vector3.right;
+                    switch (spawnArea.spawnFacingDirection)
                     {
-
-                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.right)) as Unit;
-
-
+                        case "right":
+                            direction = Vector3.right;
+                            break;
+                        case "left":
+                            direction = Vector3.left;
+                            break;
+                        case "up":
+                            direction = Vector3.up;
+                            break;
+                        case "down": //TODO not facing down!
+                            direction = Vector3.down;
+                            break;
                     }
-                }
-                else if (hit.collider.tag == "PathL")
-                {
                     if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
-
-                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.left)) as Unit;
-
-                    }
-                }
-                else if (hit.collider.tag == "PathU")
-                {
-                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
-                    {
-
-                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.forward)) as Unit;
-
-                    }
-                }
-                else if (hit.collider.tag == "PathD")
-                {
-                    if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
-                    {
-
-                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(Vector3.back)) as Unit;
-
+                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(direction)) as Unit;
+                        _unit.end = spawnArea.end;
                     }
                 }
             }

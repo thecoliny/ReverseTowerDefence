@@ -1980,7 +1980,7 @@ PrefabInstance:
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_Name
-      value: NotEnd
+      value: End
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
@@ -1990,7 +1990,7 @@ PrefabInstance:
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_TagString
-      value: playGameEnd
+      value: end
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
@@ -2046,6 +2046,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: normalEndBlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1544021839}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onPlayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
@@ -2850,7 +2885,7 @@ PrefabInstance:
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_Name
-      value: End
+      value: QuitGameEnd
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
@@ -2860,7 +2895,7 @@ PrefabInstance:
     - target: {fileID: 4646483340855600806, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: m_TagString
-      value: quitGameEnd
+      value: end
       objectReference: {fileID: 0}
     - target: {fileID: 4646483340855600810, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
@@ -2916,6 +2951,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: normalEndBlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1544021839}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onQuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}

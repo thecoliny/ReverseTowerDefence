@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4646483340855600804}
   - component: {fileID: 4646483340855600807}
   - component: {fileID: 7727353075527611351}
+  - component: {fileID: 3634908927025051146}
   m_Layer: 0
   m_Name: End
   m_TagString: end
@@ -107,3 +108,21 @@ MonoBehaviour:
   objectName: End Block
   description: Get your Colin to this block to score points and move to the next level!
   sprite: {fileID: 21300000, guid: 4a8af7fe13c36644ba049a3cc9582dde, type: 3}
+--- !u!114 &3634908927025051146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4646483340855600806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc4137dd17134c15ab63ed890385b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalEndBlock: 1
+  onColinCollision:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

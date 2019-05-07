@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
 
 
     public Transform _target;
+    public EndBehavior end;
     NavMeshAgent agent;
     CurrencyManagement currencyManagement;
     WaypointManager waypointManager;
@@ -29,7 +30,14 @@ public class Unit : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         currencyManagement = GameObject.Find("CurrencyManager").GetComponent<CurrencyManagement>();
-        _target = GameObject.Find("End").transform;
+
+        if (end) {
+            _target = end.transform;
+        }
+        else // just for waypoints
+        {
+            _target = transform;
+        }
         agent.speed = speed;
         slowCount = 0;
     }
@@ -53,7 +61,7 @@ public class Unit : MonoBehaviour
     {
         if (other.tag == "end")
         {
-            Messenger.Broadcast(GameEvent.UNIT_PASSED);
+            other.GetComponent<EndBehavior>().OnColinCollision();
             Destroy(this.gameObject);
         }
         else if (other.tag == "Waypoint")
@@ -62,16 +70,6 @@ public class Unit : MonoBehaviour
             {
                 onWaypointPassed();
             }
-        }
-        else if (other.tag == "playGameEnd")
-        {
-            GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onPlayGame();
-            Destroy(this.gameObject);
-        }
-        else if (other.tag == "quitGameEnd")
-        {
-            GameObject.Find("StartMenuManager").GetComponent<StartMenuManager>().onQuitGame();
-            Destroy(this.gameObject);
         }
         else if (other.tag == "Projectile")
         {

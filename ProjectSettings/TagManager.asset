@@ -15,11 +15,6 @@ TagManager:
   - Checkpoint
   - SlowProjectile
   - Tower
-  - playGameEnd
-  - quitGameEnd
-  - PathL
-  - PathD
-  - PathU
   - Waypoint
   layers:
   - Default
