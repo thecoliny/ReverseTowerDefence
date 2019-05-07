@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 229555407}
   m_Layer: 5
   m_Name: Quit Button
-  m_TagString: Untagged
+  m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4126,7 +4126,7 @@ GameObject:
   - component: {fileID: 1798905756}
   m_Layer: 5
   m_Name: Restart Game Button
-  m_TagString: Untagged
+  m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
