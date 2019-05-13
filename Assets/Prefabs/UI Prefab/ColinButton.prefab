@@ -1431,11 +1431,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7727353075527611351, guid: 44976dac4383ead4da2cf4d52a330129,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3634908927025051146, guid: 44976dac4383ead4da2cf4d52a330129,
         type: 3}
       propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.size
@@ -1471,8 +1466,12 @@ PrefabInstance:
       propertyPath: onColinCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7727353075527611351, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
+    - target: {fileID: 7727353075527611351, guid: 44976dac4383ead4da2cf4d52a330129,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976dac4383ead4da2cf4d52a330129, type: 3}
 --- !u!114 &4759467138775664844 stripped
 MonoBehaviour:

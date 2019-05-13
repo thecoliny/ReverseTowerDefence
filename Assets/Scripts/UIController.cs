@@ -122,6 +122,7 @@ public class UIController : MonoBehaviour
         {
             canvas.Close();
             winning.Open();
+
         }
     }
 
