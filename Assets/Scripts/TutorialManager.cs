@@ -80,7 +80,19 @@ public class TutorialManager : MonoBehaviour
 
     public void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        DeviceType type = SystemInfo.deviceType;
+
+        Ray ray = new Ray();
+
+        if (type == DeviceType.Handheld && Input.touchCount == 1)
+        {
+            ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        }
+        else if (type == DeviceType.Desktop)
+        {
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+        
 
         RaycastHit hit;
 
