@@ -88,9 +88,11 @@ public class TutorialManager : MonoBehaviour
         {
             if (hit.collider.tag == "Tower" || hit.collider.tag == "unit" || hit.collider.tag == "end" || hit.collider.tag == "Checkpoint")
             {
-                if (hit.collider)
-                closeColliderTutorial();
-                showColliderTutorial(hit.collider.gameObject.GetComponent<TutorialObject>());
+                if (hit.collider && hit.collider.gameObject.GetComponent<TutorialObject>().isActiveAndEnabled)
+                {
+                    closeColliderTutorial();
+                    showColliderTutorial(hit.collider.gameObject.GetComponent<TutorialObject>());
+                }
             }
 
             if (hit.collider.tag == "Path" || hit.collider.tag == "Untagged")
