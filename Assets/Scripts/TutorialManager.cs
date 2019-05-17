@@ -18,7 +18,6 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialUI.image.sprite = currentTutorialObject.sprite;
             tutorialUI.objectName.text = currentTutorialObject.objectName;
-            tutorialUI.type.text = currentTutorialObject.getObjectType();
             tutorialUI.description.text = currentTutorialObject.description;
             tutorialUI.stats.text = string.Join("\n", currentTutorialObject.GetStats().ToArray());
         }

@@ -23,8 +23,8 @@ public class TutorialTower : TutorialObject
         setObjectType("Tower");
         setStats(new List<string>{
             "Range: " + range,
-            "Rot Speed: " + towerRotationSpeed,
-            "Proj Speed: " + projectileSpeed,
+            //"Rot Speed: " + towerRotationSpeed,
+            //"Proj Speed: " + projectileSpeed,
             "Damage: " + damage,
             "Cooldown: " + cooldownTime
         });

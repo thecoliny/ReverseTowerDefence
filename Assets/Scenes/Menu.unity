@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
@@ -495,7 +495,7 @@ PrefabInstance:
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
@@ -610,7 +610,7 @@ PrefabInstance:
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7351082922384685404, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
@@ -873,9 +873,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 60
+    m_MaxSize: 100
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
