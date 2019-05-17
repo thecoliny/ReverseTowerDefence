@@ -10,20 +10,20 @@ public class LevelManager : MonoBehaviour
     public bool mommyActive;
     public string nextLevelName;
     public string thisLevelName;
+    public string menuName;
     public int passingScore;
-    private SceneController _sceneController;
-
-    public void Start()
-    {
-        _sceneController = this.transform.GetComponentInChildren<SceneController>();
-    }
+    public SceneController sceneController;
 
     public void Restart()
     {
-        _sceneController.Next(thisLevelName);
+        sceneController.Next(thisLevelName);
     }
     public void Next() {
-        _sceneController.Next(nextLevelName);
+        sceneController.Next(nextLevelName);
+    }
+    public void Menu()
+    {
+        sceneController.Next(menuName);
     }
 
     public void QuitGame()
