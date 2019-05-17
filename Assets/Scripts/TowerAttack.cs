@@ -15,7 +15,7 @@ public class TowerAttack : MonoBehaviour
     [SerializeField] public float cooldownTime;
     [SerializeField] private Sprite rangeIndicatorSprite;
     private GameObject _rangeIndicator;
-    GameObject target = null;
+    Unit target = null;
     private bool cdReady = true; 
 
 
@@ -54,9 +54,10 @@ public class TowerAttack : MonoBehaviour
             GameObject[] temp_targets = GameObject.FindGameObjectsWithTag("unit");
             foreach(GameObject temp_target in temp_targets)
             {
-                if (InRange(temp_target))
+                Unit temp_target_unit = temp_target.GetComponent<Unit>();
+                if (InRange(temp_target_unit))
                 {
-                    target = temp_target;
+                    target = temp_target_unit;
                 }
             }
         }
@@ -81,6 +82,7 @@ public class TowerAttack : MonoBehaviour
                     newProjectile.transform.position = transform.TransformPoint(Vector3.forward * 0.0f);
                     newProjectile.transform.Translate(0.0f, -0.5f, 0.0f);
                     newProjectile.transform.rotation = transform.rotation;
+                    newProjectile.GetComponent<ProjectileStats>().target = target;
                     _projectiles.Add(newProjectile);
                     StartCoroutine(Wait());
             }
@@ -88,6 +90,8 @@ public class TowerAttack : MonoBehaviour
             // update any existing projectiles
             foreach (GameObject projectile in _projectiles)
             {
+
+                projectile.GetComponent<ProjectileStats>().target = target;
                 Vector3 projectileDirection = (target.transform.position - projectile.transform.position).normalized;
                 Quaternion projectileLookRotation = Quaternion.LookRotation(projectileDirection);
 
@@ -97,7 +101,7 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
-    private bool InRange(GameObject target)
+    private bool InRange(Unit target)
     {
         Vector3 towerLoc = this.transform.position;
         Vector3 targetLoc = target.transform.position;

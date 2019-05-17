@@ -75,7 +75,7 @@ public class Unit : MonoBehaviour
         {
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
 
-            if (!stats.hit)
+            if (!stats.hit && stats.target == this)
             {
                 stats.hit = true;
                 ReactToHit(stats.damage);
@@ -86,7 +86,7 @@ public class Unit : MonoBehaviour
         {
             ProjectileStats stats = other.gameObject.GetComponent<ProjectileStats>();
 
-            if (!stats.hit)
+            if (!stats.hit && stats.target == this)
             {
                 stats.hit = true;
                 agent.speed = speed * stats.slowRatio;
