@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   end: {fileID: 0}
   spawnFacingDirection: right
+  tutorialEnabled: 1
 --- !u!1 &8942494399994485905
 GameObject:
   m_ObjectHideFlags: 0

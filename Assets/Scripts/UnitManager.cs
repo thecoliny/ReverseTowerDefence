@@ -43,16 +43,21 @@ public class UnitManager : MonoBehaviour
                             direction = Vector3.left;
                             break;
                         case "up":
-                            direction = Vector3.up;
+                            direction = Vector3.forward;
                             break;
-                        case "down": //TODO not facing down!
-                            direction = Vector3.down;
+                        case "down":
+                            direction = Vector3.back;
                             break;
                     }
                     if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
                         Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(direction)) as Unit;
                         _unit.end = spawnArea.end;
+
+                        if (!spawnArea.tutorialEnabled)
+                        {
+                            _unit.GetComponent<TutorialUnit>().enabled = false;
+                        }
                     }
                 }
             }

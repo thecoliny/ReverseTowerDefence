@@ -6,4 +6,5 @@ public class SpawnArea : MonoBehaviour
 {
     [SerializeField] public EndBehavior end;
     [SerializeField] public string spawnFacingDirection;
+    [SerializeField] public bool tutorialEnabled;
 }

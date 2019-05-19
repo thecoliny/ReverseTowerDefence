@@ -362,6 +362,31 @@ PrefabInstance:
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 999300401500248691, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223676870829573866, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840961985294559349, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8152439945097082266, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630501172800393044, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2857a835d31844fea804aa53831062ec, type: 3}
 --- !u!4 &641729128 stripped
@@ -587,6 +612,31 @@ PrefabInstance:
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level Select
       objectReference: {fileID: 0}
+    - target: {fileID: 999300401500248691, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223676870829573866, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840961985294559349, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8152439945097082266, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630501172800393044, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2857a835d31844fea804aa53831062ec, type: 3}
 --- !u!4 &1046755584 stripped
@@ -696,6 +746,31 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 999300401500248691, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223676870829573866, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840961985294559349, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8152439945097082266, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630501172800393044, guid: 2857a835d31844fea804aa53831062ec,
+        type: 3}
+      propertyPath: tutorialEnabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2857a835d31844fea804aa53831062ec, type: 3}
@@ -2947,7 +3022,9 @@ MonoBehaviour:
   mommyActive: 0
   nextLevelName: Menu
   thisLevelName: Level 1
+  menuName: 
   passingScore: 0
+  sceneController: {fileID: 0}
 --- !u!224 &4338786720123184190
 RectTransform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class WaypointManager : MonoBehaviour
         for (int i = 0; i < numUnits; i++)
         {
             Unit newUnit = Instantiate<Unit>(units[Random.Range(0, units.Count)]);
+            newUnit.GetComponent<TutorialUnit>().enabled = false;
             newUnit.shouldFollowWaypoint = true;
             newUnit.currentWaypoint = Random.Range(0, waypoints.Length);
             newUnit.transform.position = waypoints[newUnit.currentWaypoint].transform.position;
