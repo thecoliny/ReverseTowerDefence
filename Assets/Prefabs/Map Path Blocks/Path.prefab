@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8963604735232743255}
   - component: {fileID: 8963604735232743254}
   - component: {fileID: 4692384896408532549}
+  - component: {fileID: 8302895860944862194}
   m_Layer: 0
   m_Name: Path
   m_TagString: Path
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 419751530b0de3a4e860f83ae808c052, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,8 +100,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8963604735232743253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6b2f9c51bb4ef6428cd4c32d8adf90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8302895860944862194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963604735232743253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3dec1eb5ba3438e997c0c9511affce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 2800000, guid: 54fe95d1cab334c38898cd809f5a5793, type: 3}

@@ -51,7 +51,7 @@ public class UnitManager : MonoBehaviour
                     }
                     if (_currencyManagement.spendCurrency(units[selectedButton - 1].GetComponent<Unit>().Cost))
                     {
-                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(hit.collider.gameObject.transform.position.x, 2, hit.collider.gameObject.transform.position.z), Quaternion.LookRotation(direction)) as Unit;
+                        Unit _unit = Instantiate(units[selectedButton - 1], new Vector3(ray.origin.x, 2, ray.origin.z), Quaternion.LookRotation(direction)) as Unit;
                         _unit.end = spawnArea.end;
 
                         if (!spawnArea.tutorialEnabled)

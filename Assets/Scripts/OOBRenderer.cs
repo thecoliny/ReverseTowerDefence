@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class OOBRenderer : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class OOBRenderer : MonoBehaviour
         int r = Random.Range(0, 16);
         if (r > 3)
         {
-            r %= 2;
+            r %= 4;
         }
         int rot = Random.Range(0, 4);
         float bottomLeft = 0.25f * r;
@@ -22,6 +21,7 @@ public class OOBRenderer : MonoBehaviour
         UVs[1] = new Vector2(0.0f, 0.0f);
         UVs[2] = new Vector2(0.0f, 0.0f);
         UVs[3] = new Vector2(0.0f, 0.0f);
+        rot = 0;
         // Top
         switch (rot)
         {
