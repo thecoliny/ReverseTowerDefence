@@ -3,8 +3,8 @@
         _Color("Main Color", Color) = (1,1,1,1)
         _BumpAmt("Distortion", Range(0,128)) = 10
         _MainTex("Tint Color (RGB)", 2D) = "white" {}
-    _BumpMap("Normalmap", 2D) = "bump" {}
-    _Size("Size", Range(0, 20)) = 1
+        _BumpMap("Normalmap", 2D) = "bump" {}
+        _Size("Size", Range(0, 20)) = 1
     }
 
         Category{
@@ -72,7 +72,7 @@
         sum += GRABPIXEL(0.12, +2.0);
         sum += GRABPIXEL(0.09, +3.0);
         sum += GRABPIXEL(0.05, +4.0);
-
+        
         return sum;
     }
         ENDCG
