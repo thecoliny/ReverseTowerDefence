@@ -20,6 +20,8 @@ public class UIController : MonoBehaviour
     private int passingScore;
     [SerializeField] private UIPopup winning;
     [SerializeField] private UIPopup canvas;
+    [SerializeField] private float selectedButtonScale = 1.1f;
+    [SerializeField] private int defaultButton = 1;
     private LevelManager levelManager;
     private CurrencyManagement _currencyManagement;
     private int score = 0;
@@ -47,13 +49,15 @@ public class UIController : MonoBehaviour
 
         indicator.transform.position = new Vector3(indicatorXCoord, button1.transform.position.y - 5, 0);
 
+        selectedButton = defaultButton;
+
         if (button1Active)
         {
             button1.onClick.AddListener(clickButton1);
             UnitButton unitButton1 = button1.gameObject.GetComponent<UnitButton>();
             unitButton1.tutorialManager = tutorialManager;
             unitButton1.unit = unitManager.units[0].gameObject;
-            
+            if (selectedButton == 1) button1.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
         }
         else
         {
@@ -65,6 +69,7 @@ public class UIController : MonoBehaviour
             UnitButton unitButton2 = button2.gameObject.GetComponent<UnitButton>();
             unitButton2.tutorialManager = tutorialManager;
             unitButton2.unit = unitManager.units[1].gameObject;
+            if (selectedButton == 2) button3.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
         }
         else
         {
@@ -76,32 +81,38 @@ public class UIController : MonoBehaviour
             UnitButton unitButton3 = button3.gameObject.GetComponent<UnitButton>();
             unitButton3.tutorialManager = tutorialManager;
             unitButton3.unit = unitManager.units[2].gameObject;
+            if (selectedButton == 2) button3.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
         }
         else
         {
             button3.gameObject.SetActive(false);
         }
 
-        selectedButton = 1;
         _scoreLabel.text = "Score: " + score + "/" + passingScore;
     }
 
     void clickButton1()
     {
         selectedButton = 1;
-        indicator.transform.position = new Vector3(indicatorXCoord, button1.transform.position.y - 5, 0);
+        button1.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
+        button2.transform.localScale = Vector3.one;
+        button3.transform.localScale = Vector3.one;
     }
 
     void clickButton2()
     {
         selectedButton = 2;
-        indicator.transform.position = new Vector3(indicatorXCoord, button2.transform.position.y - 5, 0);
+        button1.transform.localScale = Vector3.one;
+        button2.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
+        button3.transform.localScale = Vector3.one;
     }
 
     void clickButton3()
     {
         selectedButton = 3;
-        indicator.transform.position = new Vector3(indicatorXCoord, button3.transform.position.y - 5, 0);
+        button1.transform.localScale = Vector3.one;
+        button2.transform.localScale = Vector3.one;
+        button3.transform.localScale = new Vector3(selectedButtonScale, selectedButtonScale, selectedButtonScale);
     }
 
     public int getButton()

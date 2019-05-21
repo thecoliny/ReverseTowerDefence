@@ -1889,17 +1889,17 @@ PrefabInstance:
     - target: {fileID: 106352837209662165, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: buttonText
-      value: Restart Game
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 106352837209662165, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1544021839}
+      objectReference: {fileID: 4248303860405744006}
     - target: {fileID: 106352837209662165, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onPlayGame
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 106352837209662165, guid: 2857a835d31844fea804aa53831062ec,
         type: 3}
@@ -9721,11 +9721,11 @@ MonoBehaviour:
   colinActive: 1
   fastColinActive: 0
   mommyActive: 0
-  nextLevelName: End
-  thisLevelName: Menu
-  menuName: 
+  nextLevelName: Menu
+  thisLevelName: End
+  menuName: Menu
   passingScore: 0
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 8298862907109696666}
 --- !u!224 &4338786720123184190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10208,6 +10208,8 @@ MonoBehaviour:
   unitManager: {fileID: 7156817812377674569}
   winning: {fileID: 3815410859653609832}
   canvas: {fileID: 208668897982032846}
+  selectedButtonScale: 1.1
+  defaultButton: 1
 --- !u!223 &8109306207672044210
 Canvas:
   m_ObjectHideFlags: 0

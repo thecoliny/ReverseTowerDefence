@@ -3576,6 +3576,8 @@ MonoBehaviour:
   unitManager: {fileID: 7156817812377674569}
   winning: {fileID: 3815410859653609832}
   canvas: {fileID: 208668897982032846}
+  selectedButtonScale: 1.1
+  defaultButton: 1
 --- !u!223 &8109306207672044210
 Canvas:
   m_ObjectHideFlags: 0
