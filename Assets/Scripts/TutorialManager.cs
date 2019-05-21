@@ -87,7 +87,7 @@ public class TutorialManager : MonoBehaviour
         {
             ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         }
-        else if (type == DeviceType.Desktop)
+        else if (type == DeviceType.Desktop && Input.GetMouseButtonDown(0))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         }

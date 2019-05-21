@@ -5,19 +5,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UnitButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UnitButton : MonoBehaviour
 {
     [NonSerialized] public TutorialManager tutorialManager;
     [NonSerialized] public GameObject unit;
+    private Button button;
 
-
-    public void OnPointerEnter(PointerEventData eventData)
+    private void Start()
     {
-        tutorialManager.showButtonTutorial(unit.GetComponent<TutorialUnit>());
+        button = GetComponent<Button>();
+        button.onClick.AddListener(OnShowTutorial);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnShowTutorial()
     {
-        tutorialManager.closeButtonTutorial();
+        tutorialManager.showColliderTutorial(unit.GetComponent<TutorialUnit>());
+
     }
 }
