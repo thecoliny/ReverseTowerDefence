@@ -18,6 +18,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private Gradient particleGradient;
     [SerializeField] protected ParticleSystem hitParticle;
     [SerializeField] protected ParticleSystem deathParticle;
+    [SerializeField] private ParticleSystem endParticle;
 
     [System.NonSerialized] public bool shouldFollowWaypoint;
     [System.NonSerialized] public bool followingWaypoint;
@@ -65,6 +66,8 @@ public class Unit : MonoBehaviour
         if (other.tag == "end")
         {
             other.GetComponent<EndBehavior>().OnColinCollision();
+            playParticleEffect(deathParticle);
+            playParticleEffect(endParticle, false);
             Destroy(this.gameObject);
         }
         else if (other.tag == "Waypoint")
@@ -124,12 +127,15 @@ public class Unit : MonoBehaviour
         }
     }
 
-    protected void playParticleEffect(ParticleSystem particle)
+    protected void playParticleEffect(ParticleSystem particle, bool overrideColor = true)
     {
         ParticleSystem newParticle = Instantiate(particle);
         newParticle.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
         ParticleSystem.MainModule main = newParticle.main;
-        main.startColor = particleGradient;
+        if (overrideColor)
+        {
+            main.startColor = particleGradient;
+        }
         newParticle.Play();
     }
 

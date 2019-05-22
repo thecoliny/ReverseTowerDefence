@@ -199,6 +199,8 @@ MonoBehaviour:
     type: 3}
   deathParticle: {fileID: 4602531628649282108, guid: 48a8914aa3e754492a3ba0e99cb9dcf4,
     type: 3}
+  endParticle: {fileID: 4602531628649282108, guid: 7bdee013fbfef4a80847b81611a5ea80,
+    type: 3}
   baby: {fileID: 6994713211853705603, guid: 273723b3c62310740b81de0477103577, type: 3}
 --- !u!114 &4477581599144851762
 MonoBehaviour:
