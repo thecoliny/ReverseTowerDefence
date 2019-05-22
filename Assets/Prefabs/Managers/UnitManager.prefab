@@ -44,9 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   units:
-  - {fileID: 6570364303385280226, guid: 1862414665522a14590225fbc37b180c, type: 3}
-  - {fileID: 995567095501425815, guid: 88485294108fb2b4eaa261c7925d3225, type: 3}
-  - {fileID: 5832522554784578178, guid: 65ff7f172fa2b2041b062f42f6f350c0, type: 3}
-  UIController: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _UIController: {fileID: 0}
   currencyManager: {fileID: 9086187328579396271, guid: 9679c3906374149b8999e72305c27400,
+    type: 3}
+  tutorialManager: {fileID: 0}
+  spawnParticle: {fileID: 4602531628649282108, guid: 20102b3b9129147ff9a0d0850252a105,
     type: 3}

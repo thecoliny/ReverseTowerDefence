@@ -8,7 +8,9 @@ public class UnitManager : MonoBehaviour
     [SerializeField] private UIController _UIController;
     [SerializeField] GameObject currencyManager;
     [SerializeField] TutorialManager tutorialManager;
+    [SerializeField] ParticleSystem spawnParticle;
     private CurrencyManagement _currencyManagement;
+    
 
     private void Start()
     {
@@ -59,6 +61,9 @@ public class UnitManager : MonoBehaviour
                             {
                                 _unit.GetComponent<TutorialUnit>().enabled = false;
                             }
+                            ParticleSystem particle = Instantiate(spawnParticle);
+                            particle.transform.position = new Vector3(_unit.transform.position.x, _unit.transform.position.y + 1, _unit.transform.position.z);
+                            particle.Play();
                         }
                     }
                 }

@@ -88,7 +88,7 @@ public class UIController : MonoBehaviour
             button3.gameObject.SetActive(false);
         }
 
-        _scoreLabel.text = "Score: " + score + "/" + passingScore;
+        _scoreLabel.text = score + "/" + passingScore;
     }
 
     void clickButton1()
@@ -128,7 +128,7 @@ public class UIController : MonoBehaviour
             Debug.Log("SCORE LABEL NOT FOUND"); // TODO: score label not being found, but somehow still updates label??
             return;
         }
-            _scoreLabel.text = "Score: " + score + "/" + passingScore; /* TODO: This Text is getting destroyed! */
+            _scoreLabel.text = score + "/" + passingScore; /* TODO: This Text is getting destroyed! */
         if (score >= passingScore)
         {
             canvas.Close();
@@ -139,7 +139,7 @@ public class UIController : MonoBehaviour
 
     private void UpdateCurrency()
     {
-        _currencyLabel.text = "Currency: " + _currencyManagement.amount;
+        _currencyLabel.text = _currencyManagement.amount.ToString();
     }
     // Update is called once per frame
     void Update()
