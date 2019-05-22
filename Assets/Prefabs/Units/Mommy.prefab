@@ -166,6 +166,39 @@ MonoBehaviour:
   health: 8
   cost: 3
   speed: 1
+  particleGradient:
+    serializedVersion: 2
+    key0: {r: 0.9490197, g: 0.41960788, b: 0.95294124, a: 1}
+    key1: {r: 0.7137255, g: 0.2627451, b: 0.72156864, a: 1}
+    key2: {r: 0.6117647, g: 0.27058825, b: 0.6156863, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32698
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  hitParticle: {fileID: 4602531628649282108, guid: 6b096ddc304a44605aef02001847c041,
+    type: 3}
+  deathParticle: {fileID: 4602531628649282108, guid: 48a8914aa3e754492a3ba0e99cb9dcf4,
+    type: 3}
   baby: {fileID: 6994713211853705603, guid: 273723b3c62310740b81de0477103577, type: 3}
 --- !u!114 &4477581599144851762
 MonoBehaviour:

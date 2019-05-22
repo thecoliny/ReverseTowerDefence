@@ -15,6 +15,9 @@ public class Unit : MonoBehaviour
     [SerializeField] private float health;
     [SerializeField] private int cost;
     [SerializeField] private float speed;
+    [SerializeField] private Gradient particleGradient;
+    [SerializeField] protected ParticleSystem hitParticle;
+    [SerializeField] protected ParticleSystem deathParticle;
 
     [System.NonSerialized] public bool shouldFollowWaypoint;
     [System.NonSerialized] public bool followingWaypoint;
@@ -81,6 +84,7 @@ public class Unit : MonoBehaviour
                 ReactToHit(stats.damage);
                 Destroy(other.gameObject);
             }
+            
         }
         else if(other.tag == "SlowProjectile")
         {
@@ -108,10 +112,25 @@ public class Unit : MonoBehaviour
     public virtual void ReactToHit(float damage)
     {
         health -= damage;
-        if(health <= 0.0f)
+        if (health <= 0.0f)
         {
+            playParticleEffect(deathParticle);
+
             Destroy(this.gameObject);
         }
+        else
+        {
+            playParticleEffect(hitParticle);
+        }
+    }
+
+    protected void playParticleEffect(ParticleSystem particle)
+    {
+        ParticleSystem newParticle = Instantiate(particle);
+        newParticle.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+        ParticleSystem.MainModule main = newParticle.main;
+        main.startColor = particleGradient;
+        newParticle.Play();
     }
 
     private void OnLevelPause()

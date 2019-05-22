@@ -11,6 +11,7 @@ public class MommyUnit : Unit
         Health = Health - damage;
         if (Health <= 0.0f)
         {
+            playParticleEffect(deathParticle);
             float posX = this.transform.position.x;
             float posY = this.transform.position.y;
             float posZ = this.transform.position.z;
@@ -33,6 +34,10 @@ public class MommyUnit : Unit
             // _baby2.transform.rotation = this.transform.rotation;
             // _baby3.transform.position = _position5;
             //_baby3.transform.rotation = this.transform.rotation;
+        }
+        else
+        {
+            playParticleEffect(hitParticle);
         }
     }
 }
