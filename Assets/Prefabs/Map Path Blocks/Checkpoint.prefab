@@ -124,10 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9f02ff0f4b449fc8b6a0a01df6c23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Checkpoint
-  description: Run over to get money! The more Colin that run over it, the less additional
-    money earned.
-  sprite: {fileID: 21300000, guid: 66c1552e6d217b34d80432ba8e3fa9f4, type: 3}
+  objectName: Log
+  description: Run over to get bark! The more Colin that run over it, the less additional
+    bark earned.
+  sprite: {fileID: 21300000, guid: b051bd97489a04534b656bc42258307c, type: 3}
 --- !u!114 &8937906258355932970
 MonoBehaviour:
   m_ObjectHideFlags: 0
