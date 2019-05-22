@@ -7,6 +7,7 @@ public class CurrencyCheckpoint : MonoBehaviour
     [SerializeField] private GameObject currencyManager;
     [SerializeField] private int initialBonus;
     [SerializeField] private TextMesh label;
+    [SerializeField] private ParticleSystem checkpointParticle;
     private CurrencyManagement _currencyManagement;
     private int count;
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class CurrencyCheckpoint : MonoBehaviour
                     initialBonus--;
                 }
             }
+            ParticleSystem newParticle = Instantiate(checkpointParticle);
+            newParticle.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
         }
         label.text = initialBonus.ToString();
     }

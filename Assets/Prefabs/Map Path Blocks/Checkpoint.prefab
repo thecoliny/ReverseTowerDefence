@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1925437315559847833}
   - component: {fileID: 1925437315559847834}
   - component: {fileID: 4129789453422887670}
+  - component: {fileID: 8937906258355932970}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Checkpoint
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af6b9b3deff734ca7938fab4451600fc, type: 2}
+  - {fileID: 2100000, guid: a2dfe0e8a47004649831aca567eed911, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +110,8 @@ MonoBehaviour:
   currencyManager: {fileID: 0}
   initialBonus: 1
   label: {fileID: 8976201110331675906}
+  checkpointParticle: {fileID: 4602531628649282108, guid: a68a07f08fd734b1cb13d4ddc6c5b0df,
+    type: 3}
 --- !u!114 &4129789453422887670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +128,18 @@ MonoBehaviour:
   description: Run over to get money! The more Colin that run over it, the less additional
     money earned.
   sprite: {fileID: 21300000, guid: 66c1552e6d217b34d80432ba8e3fa9f4, type: 3}
+--- !u!114 &8937906258355932970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925437315559847839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14237a12243a534438d3b9b9f80f534d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3562872532969202255
 GameObject:
   m_ObjectHideFlags: 0
