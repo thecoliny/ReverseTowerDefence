@@ -10,6 +10,8 @@ public class StartMenuManager : MonoBehaviour
     public void goToFirstLevel()
     {
         SceneManager.LoadScene(firstLevel);
+        AudioSource audio = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        audio.Play();
     }
 
     public void onPlayGame()

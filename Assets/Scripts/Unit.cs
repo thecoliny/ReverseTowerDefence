@@ -136,7 +136,6 @@ public class Unit : MonoBehaviour
         {
             main.startColor = particleGradient;
         }
-        newParticle.Play();
     }
 
     private void OnLevelPause()
